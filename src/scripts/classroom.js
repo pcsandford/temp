@@ -9,6 +9,7 @@ RiseVision.ClassroomsDirectory = (function() {
   var counter = 0;
   var $mainContainer = $("#main-container");
   var $mainList = $(".classroom-directory");
+  var $cardsClassroom = $(".cards-classrooms");
   // var $departmentCards = $(".cards-departments");
 
   /*
@@ -50,7 +51,7 @@ RiseVision.ClassroomsDirectory = (function() {
     var individualClassroom = {};
 
     individualClassroom.name = getCell(index, cells);
-    // individualDept.link = getCell(++index, cells);
+    individualClassroom.room = getCell(++index, cells);
 
 
     return individualClassroom;
@@ -79,42 +80,30 @@ RiseVision.ClassroomsDirectory = (function() {
     var classroomEntry = null,
       classroomName = null,
       departmentLink = null,
-      departmentCard = null,
+      classroomCard = null,
       numClassrooms = classrooms.length;
 
         $mainList.empty();
-        // $departmentCards.empty();
+        $cardsClassroom.empty();
 
       for (var i = 0; i < numClassrooms; i++) {
 
         classroomEntry = document.createElement("li");
         classroomEntry.className = "classroom-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         classroomEntry.textContent = classrooms[i].name;
-        // departmentLink = departments[i].link;
-        // departmentLink = mainDepartments[i].link
-        // departmentLink.textContent = departments[i].link;
-
-        // <li class="undergraduateAdvisement-directoryName" data-link="departments-detail-link" data-breadcrumbs="Undergraduate Advisement">Undergraduate Advisement</li>
-
 
         classroomEntry.InnerHTML = classroomEntry.textContent;
-        // departmentEntry.className = departmentLink + "-directoryName";
-        // departmentEntry.setAttribute("data-link",departmentLink+"-link");
-        // departmentEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // departmentEntry.setAttribute("data-test",departmentLink);
 
         $mainList.append(classroomEntry);
 
-        // departmentCard = document.createElement("div");
-        // departmentCard.className = "card";
-        // departmentCard.setAttribute("data-name", departmentEntry.textContent);
-        // departmentCard.innerHTML = "<h2>"+departmentEntry.textContent+"</h2>";
+        classroomCard = document.createElement("div");
+        classroomCard.className = "card department-only";
+        classroomCard.setAttribute("data-name", classroomEntry.textContent);
+        classroomCard.setAttribute("data-room", classrooms[i].room);
 
-        // $departmentCards.append(departmentCard);
+        classroomCard.innerHTML = "<h2>"+classroomEntry.textContent+"</h2>";
+
+        $cardsClassroom.append(classroomCard);
 
       }
     }

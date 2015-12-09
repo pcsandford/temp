@@ -7,8 +7,9 @@ RiseVision.FacultyDirectory = (function() {
 
   var faculty = [];
   var counter = 0;
-  var $mainContainer = $("#main-container")
-  var $mainList = $(".faculty-directory")
+  var $mainContainer = $("#main-container");
+  var $mainList = $(".faculty-directory");
+  var $facultyCards = $(".cards-faculty");
 
   /*
    *  Private Methods
@@ -50,7 +51,11 @@ RiseVision.FacultyDirectory = (function() {
 
     individualFaculty.firstName = getCell(index, cells);
     individualFaculty.lastName = getCell(++index, cells);
-    // individualDepartment.link = getCell(++index, cells);
+    individualFaculty.phone = getCell(++index, cells);
+    individualFaculty.room = getCell(++index, cells);
+    individualFaculty.dept = getCell(++index, cells);
+    individualFaculty.position = getCell(++index, cells);
+    individualFaculty.image = getCell(++index, cells);
 
 
     return individualFaculty;
@@ -79,6 +84,7 @@ RiseVision.FacultyDirectory = (function() {
     var facultyEntry = null,
       facultyFirstName = null,
       facultySecondName = null,
+      facultyCard = null,
       departmentLink = null,
       numFaculty = faculty.length;
 
@@ -88,26 +94,26 @@ RiseVision.FacultyDirectory = (function() {
 
         facultyEntry = document.createElement("li");
         facultyEntry.className = "faculty-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         facultyFirstName = faculty[i].firstName;
         facultySecondName = faculty[i].lastName;
         facultyEntry.textContent = facultyFirstName + " " + facultySecondName;
-        // departmentLink = mainDepartments[i].link
-        // departmentLink.textContent = departments[i].link;
-
-
-
 
         facultyEntry.InnerHTML = facultyEntry.textContent;
-        // departmentEntry.className = "main-directory-"+departmentLink;
-        // departmentEntry.setAttribute("data-link",departmentLink+"-link");
-        // departmentEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // departmentEntry.setAttribute("data-test",departmentLink);
 
         $mainList.append(facultyEntry);
+
+        facultyCard = document.createElement("div");
+        facultyCard.className = "card";
+        facultyCard.setAttribute("data-name", facultyEntry.textContent);
+        facultyCard.setAttribute("data-dept", faculty[i].dept);
+        facultyCard.setAttribute("data-position", faculty[i].position);
+        facultyCard.setAttribute("data-phone", faculty[i].phone);
+        facultyCard.setAttribute("data-room", faculty[i].room);
+        facultyCard.setAttribute("data-image", faculty[i].image);
+
+        facultyCard.innerHTML = "<h2>"+facultyEntry.textContent+"</h2>";
+
+        $facultyCards.append(facultyCard);
       }
     }
 

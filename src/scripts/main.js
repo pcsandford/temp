@@ -15,5 +15,12 @@
     RiseVision.ManagementDirectory.init();
     RiseVision.FinanceDirectory.init();
     RiseVision.MarketingDirectory.init();
+    RiseVision.AccountingDirectory.init();
+    RiseVision.TechDirectory.init();
+    RiseVision.MinorityDirectory.init();
+    RiseVision.RehabInstituteDirectory.init();
+    RiseVision.BehaviourDirectory.init();
+    RiseVision.CommunicationDirectory.init();
+    RiseVision.RehabCounsellingDirectory.init();
   });
 })();

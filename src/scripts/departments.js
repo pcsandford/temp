@@ -51,6 +51,7 @@ RiseVision.DepartmentsDirectory = (function() {
 
     individualDept.name = getCell(index, cells);
     individualDept.link = getCell(++index, cells);
+    individualDept.room = getCell(++index, cells);
 
 
     return individualDept;
@@ -89,17 +90,8 @@ RiseVision.DepartmentsDirectory = (function() {
 
         departmentEntry = document.createElement("li");
         departmentEntry.className = "department-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         departmentEntry.textContent = departments[i].name;
         departmentLink = departments[i].link;
-        // departmentLink = mainDepartments[i].link
-        // departmentLink.textContent = departments[i].link;
-
-        // <li class="undergraduateAdvisement-directoryName" data-link="departments-detail-link" data-breadcrumbs="Undergraduate Advisement">Undergraduate Advisement</li>
-
 
         departmentEntry.InnerHTML = departmentEntry.textContent;
         departmentEntry.className = departmentLink + "-directoryName";
@@ -110,12 +102,13 @@ RiseVision.DepartmentsDirectory = (function() {
         $mainList.append(departmentEntry);
 
         departmentCard = document.createElement("div");
-        departmentCard.className = "card";
+        departmentCard.className = "card department-only";
         departmentCard.setAttribute("data-name", departmentEntry.textContent);
+        departmentCard.setAttribute("data-room", departments[i].room);
+
         departmentCard.innerHTML = "<h2>"+departmentEntry.textContent+"</h2>";
 
         $departmentCards.append(departmentCard);
-
       }
     }
 

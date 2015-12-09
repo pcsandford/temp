@@ -128,6 +128,50 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+@-webkit-keyframes rotation1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  80% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@keyframes rotation1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  80% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@-webkit-keyframes rotation2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  80% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
+@keyframes rotation2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  80% {
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
 body {
   color: #EFEFEF; }
 
@@ -139,13 +183,12 @@ body {
 .list-area {
   width: 25vw;
   height: 100vh;
-  background-color: #22313F;
+  background-color: #333333;
   float: left;
   position: relative;
   z-index: 0; }
   .list-area .breadcrumb-area {
     width: 100%;
-    border: 1px solid red;
     padding: 2vh 1vw;
     position: absolute;
     top: 0;
@@ -157,14 +200,22 @@ body {
       padding: 2vh 1vw; }
       .list-area .breadcrumb-area .breadcrumbs li {
         display: inline-block;
-        padding-left: 1vw; }
+        padding-left: 1.5vw;
+        position: relative; }
       .list-area .breadcrumb-area .breadcrumbs li:first-of-type {
         padding-left: 0; }
+      .list-area .breadcrumb-area .breadcrumbs li:nth-of-type(n+2):before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 7px;
+        width: 10px;
+        height: 5px;
+        background-color: #620004; }
   .list-area .list {
     margin-top: 5vh;
     width: 100%;
     height: 80vh;
-    border: 1px solid green;
     position: relative;
     top: 10vh;
     left: 0;
@@ -178,7 +229,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 1; }
       .list-area .list .main-directory li {
         font-size: 2vw;
@@ -191,7 +242,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 2;
       display: none; }
       .list-area .list .departments-directory li {
@@ -211,7 +262,9 @@ body {
       display: none; }
       .list-area .list .faculty-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .staff-directory {
       list-style: none;
       padding: 0;
@@ -224,7 +277,9 @@ body {
       display: none; }
       .list-area .list .staff-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .classroom-directory {
       list-style: none;
       padding: 0;
@@ -237,7 +292,9 @@ body {
       display: none; }
       .list-area .list .classroom-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .conferenceRoom-directory {
       list-style: none;
       padding: 0;
@@ -250,7 +307,9 @@ body {
       display: none; }
       .list-area .list .conferenceRoom-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .undergraduateAdvisement-directory {
       list-style: none;
       padding: 0;
@@ -259,7 +318,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 7;
       display: none; }
       .list-area .list .undergraduateAdvisement-directory li {
@@ -279,12 +338,14 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 8;
       display: none; }
       .list-area .list .graduatePrograms-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .deansOffice-directory {
       list-style: none;
       padding: 0;
@@ -293,12 +354,14 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 9;
       display: none; }
       .list-area .list .deansOffice-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .management-directory {
       list-style: none;
       padding: 0;
@@ -307,12 +370,14 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 9;
       display: none; }
       .list-area .list .management-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .finance-directory {
       list-style: none;
       padding: 0;
@@ -321,12 +386,14 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 9;
       display: none; }
       .list-area .list .finance-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .marketing-directory {
       list-style: none;
       padding: 0;
@@ -335,12 +402,14 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 9;
       display: none; }
       .list-area .list .marketing-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .accounting-directory {
       list-style: none;
       padding: 0;
@@ -349,12 +418,14 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 9;
       display: none; }
       .list-area .list .accounting-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
     .list-area .list .tech-directory, .list-area .list .minority-directory, .list-area .list .rehabInstitute-directory, .list-area .list .behaviour-directory, .list-area .list .communication-directory, .list-area .list .rehabCounselling-directory {
       list-style: none;
       padding: 0;
@@ -363,20 +434,23 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #22313F;
+      background-color: #333333;
       z-index: 9;
       display: none; }
       .list-area .list .tech-directory li, .list-area .list .minority-directory li, .list-area .list .rehabInstitute-directory li, .list-area .list .behaviour-directory li, .list-area .list .communication-directory li, .list-area .list .rehabCounselling-directory li {
         font-size: 2vw;
-        margin-bottom: 2vh; }
+        margin-bottom: 2vh;
+        position: relative;
+        right: -500px; }
 
 .card-area {
   width: 75vw;
   height: 100vh;
-  background-color: #34495E;
+  background-color: #666666;
   float: left;
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5); }
   .card-area .card-display {
     width: 100%;
     position: relative; }
@@ -410,18 +484,24 @@ body {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
-            flex: 0 1 auto; }
+            flex: 0 1 auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); }
   .card-area .back-button {
-    width: 70px;
-    height: 70px;
-    background-color: #9B59B6;
+    width: 120px;
+    height: 120px;
+    background-color: #620004;
     position: absolute;
     top: 2vw;
     right: 2vw;
     border-radius: 50%;
     z-index: 1000;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     display: none; }
+    .card-area .back-button img {
+      width: 70%;
+      position: absolute;
+      top: 35px;
+      right: 20px; }
 
 .card-modal {
   position: absolute;
@@ -448,7 +528,7 @@ body {
     .card-modal .card-detail-area .detail-image {
       width: 400px;
       height: 400px;
-      background-color: rebeccaPurple;
+      border: 2px solid rebeccaPurple;
       float: left;
       margin: 40px 80px 40px 40px; }
     .card-modal .card-detail-area .detail-name {
@@ -474,10 +554,45 @@ body {
     .card-modal .card-detail-area span {
       font-weight: bold; }
     .card-modal .card-detail-area .card-close-button {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       position: absolute;
       top: 30px;
       right: 30px;
       border-radius: 50%;
-      background-color: cadetBlue; }
+      background-color: cadetBlue;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); }
+      .card-modal .card-detail-area .card-close-button:before {
+        content: "";
+        position: absolute;
+        left: 45px;
+        top: 20px;
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+        width: 10px;
+        height: 60px;
+        border-radius: 5px;
+        background-color: #EFEFEF;
+        z-index: 9000; }
+      .card-modal .card-detail-area .card-close-button:after {
+        content: "";
+        position: absolute;
+        left: 45px;
+        top: 20px;
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+        width: 10px;
+        height: 60px;
+        border-radius: 5px;
+        background-color: #EFEFEF;
+        z-index: 9000; }
+
+.card-close-button.xRotation1::before {
+  -webkit-animation: rotation1 0.3s ease-in-out forwards;
+          animation: rotation1 0.3s ease-in-out forwards; }
+
+.card-close-button.xRotation2::after {
+  -webkit-animation: rotation2 0.3s ease-in-out forwards;
+          animation: rotation2 0.3s ease-in-out forwards; }

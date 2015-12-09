@@ -94,19 +94,7 @@ RiseVision.FinanceDirectory = (function() {
 
         financeEntry = document.createElement("li");
         financeEntry.className = "finance-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         financeEntry.textContent = financeNames[i].firstName + " " +financeNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $financeList.append(financeEntry);
 

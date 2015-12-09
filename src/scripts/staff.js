@@ -7,8 +7,9 @@ RiseVision.StaffDirectory = (function() {
 
   var staff = [];
   var counter = 0;
-  var $mainContainer = $("#main-container")
-  var $staffList = $(".staff-directory")
+  var $mainContainer = $("#main-container");
+  var $staffList = $(".staff-directory");
+  var $staffCards = $(".cards-staff");
 
   /*
    *  Private Methods
@@ -50,8 +51,9 @@ RiseVision.StaffDirectory = (function() {
 
     individualStaff.firstName = getCell(index, cells);
     individualStaff.lastName = getCell(++index, cells);
-    // individualDepartment.link = getCell(++index, cells);
-
+    individualStaff.phone = getCell(++index, cells);
+    individualStaff.room = getCell(++index, cells);
+    individualStaff.dept = getCell(++index, cells);
 
     return individualStaff;
   }
@@ -79,6 +81,7 @@ RiseVision.StaffDirectory = (function() {
     var staffEntry = null,
       staffFirstName = null,
       staffSecondName = null,
+      staffCard = null,
       departmentLink = null,
       numStaff = staff.length;
 
@@ -88,26 +91,24 @@ RiseVision.StaffDirectory = (function() {
 
         staffEntry = document.createElement("li");
         staffEntry.className = "staff-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         staffFirstName = staff[i].firstName;
         staffSecondName = staff[i].lastName;
         staffEntry.textContent = staffFirstName + " " + staffSecondName;
-        // departmentLink = mainDepartments[i].link
-        // departmentLink.textContent = departments[i].link;
-
-
-
 
         staffEntry.InnerHTML = staffEntry.textContent;
-        // departmentEntry.className = "main-directory-"+departmentLink;
-        // departmentEntry.setAttribute("data-link",departmentLink+"-link");
-        // departmentEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // departmentEntry.setAttribute("data-test",departmentLink);
 
         $staffList.append(staffEntry);
+
+        staffCard = document.createElement("div");
+        staffCard.className = "card";
+        staffCard.setAttribute("data-name", staffEntry.textContent);
+        staffCard.setAttribute("data-dept", staff[i].dept);
+        staffCard.setAttribute("data-phone", staff[i].phone);
+        staffCard.setAttribute("data-room", staff[i].room);
+
+        staffCard.innerHTML = "<h2>"+staffEntry.textContent+"</h2>";
+
+        $staffCards.append(staffCard);
       }
     }
 

@@ -110,11 +110,11 @@ RiseVision.MainDirectory = (function() {
         $mainList.append(departmentEntry);
 
         // create the cards
-        mainDepartmentCard = document.createElement("div");
-        mainDepartmentCard.className = "card";
-        mainDepartmentCard.setAttribute("data-name", departmentEntry.textContent);
-        mainDepartmentCard.innerHTML = "<h2>"+departmentEntry.textContent+"</h2>";
-        $mainCards.append(mainDepartmentCard);
+        // mainDepartmentCard = document.createElement("div");
+        // mainDepartmentCard.className = "card";
+        // mainDepartmentCard.setAttribute("data-name", departmentEntry.textContent);
+        // mainDepartmentCard.innerHTML = "<h2>"+departmentEntry.textContent+"</h2>";
+        // $mainCards.append(mainDepartmentCard);
       }
     }
 

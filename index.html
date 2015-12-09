@@ -18,7 +18,7 @@
     <div class="card-modal">
       <div class="card-detail-area">
         <div class="card-close-button"></div>
-        <div class="detail-image"></div>
+        <img class="detail-image" src="" alt="">
         <h2 class="detail-name"></h2>
         <p class="detail-position"></p>
         <p class="detail-department"></p>
@@ -36,7 +36,8 @@
       key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
       id="googleSheetMainList"
       min-row="1"
-      tab-id="1"></rise-google-sheet>
+      tab-id="1"
+      refresh="10"></rise-google-sheet>
       <div class="list">
 
      <!--  =======
@@ -266,59 +267,101 @@
           <li class="marketing-directory-name" data-link="marketing-detail-link">Cheryl Jarvis</li> -->
         </ul><!-- .marketing-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetAccountingList"
+        min-row="1"
+        tab-id="12"></rise-google-sheet>
+
         <ul class="accounting-directory" id="accounting-directory">
-          <li class="accounting-directory-name" data-link="accounting-detail-link">Alice Noble-Allgire</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link">Leslee Hammers</li>
+          <li class="accounting-directory-name"></li>
+          <!-- <li class="accounting-directory-name" data-link="accounting-detail-link">Leslee Hammers</li>
           <li class="accounting-directory-name" data-link="accounting-detail-link">Royce Burnett</li>
           <li class="accounting-directory-name" data-link="accounting-detail-link">Allan Karnes</li>
           <li class="accounting-directory-name" data-link="accounting-detail-link">Darla Karnes</li>
           <li class="accounting-directory-name" data-link="accounting-detail-link">Marc Morris</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link"></li>
+          <li class="accounting-directory-name" data-link="accounting-detail-link"></li> -->
         </ul><!-- .accounting-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetTechList"
+        min-row="1"
+        tab-id="16"></rise-google-sheet>
+
         <ul class="tech-directory" id="tech-directory">
-          <li class="tech-directory-name" data-link="tech-detail-link">Bruce Fisher</li>
-          <li class="tech-directory-name" data-link="tech-detail-link">Lynne Westra</li>
-          <li class="tech-directory-name" data-link="tech-detail-link">Travis Zettler</li>
+          <li class="tech-directory-name"></li>
+          <!-- <li class="tech-directory-name" data-link="tech-detail-link">Lynne Westra</li>
+          <li class="tech-directory-name" data-link="tech-detail-link">Travis Zettler</li> -->
         </ul><!-- .tech-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetMinorityList"
+        min-row="1"
+        tab-id="9"></rise-google-sheet>
+
         <ul class="minority-directory" id="minority-directory">
-          <li class="minority-directory-name" data-link="minority-detail-link">Michael Haywood</li>
+          <li class="minority-directory-name"</li>
         </ul><!-- .minority-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetRehabInstituteList"
+        min-row="1"
+        tab-id="20"></rise-google-sheet>
+
         <ul class="rehabInstitute-directory" id="rehabInstitue-directory">
-          <li class="rehabInstitute-directory-name" data-link="rehabInstitute-detail-link">Carl Flowers</li>
-          <li class="rehabInstitute-directory-name" data-link="rehabInstitute-detail-link">Eva Pregowski</li>
+          <li class="rehabInstitute-directory-name"></li>
+          <!-- <li class="rehabInstitute-directory-name" data-link="rehabInstitute-detail-link">Eva Pregowski</li> -->
         </ul><!-- .rehabInstitute-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetBehaviourList"
+        min-row="1"
+        tab-id="17"></rise-google-sheet>
+
         <ul class="behaviour-directory" id="behaviour-directory">
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Mark Dixon</li>
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Jason Hirst</li>
+          <li class="behaviour-directory-name"</li>
+          <!-- <li class="behaviour-directory-name" data-link="behaviour-detail-link">Jason Hirst</li>
           <li class="behaviour-directory-name" data-link="behaviour-detail-link">Erica Jowett Hurst</li>
           <li class="behaviour-directory-name" data-link="behaviour-detail-link">Ryan Redner</li>
           <li class="behaviour-directory-name" data-link="behaviour-detail-link">Ruth Anne Redfeldt</li>
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Charlene Burrell</li>
+          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Charlene Burrell</li> -->
         </ul><!-- .behaviour-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetCommunicationList"
+        min-row="1"
+        tab-id="18"></rise-google-sheet>
+
         <ul class="communication-directory" id="communication-directory">
-          <li class="communication-directory-name" data-link="communication-detail-link">Salim Al-Ani</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Valeri Boyer</li>
+          <li class="communication-directory-name"></li>
+         <!--  <li class="communication-directory-name" data-link="communication-detail-link">Valeri Boyer</li>
           <li class="communication-directory-name" data-link="communication-detail-link">Maria Claudia Franca</li>
           <li class="communication-directory-name" data-link="communication-detail-link">Kitty Martin</li>
           <li class="communication-directory-name" data-link="communication-detail-link">Atheana Meadows</li>
           <li class="communication-directory-name" data-link="communication-detail-link">Diane Muzio</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Sheila Dingrando</li>
+          <li class="communication-directory-name" data-link="communication-detail-link">Sheila Dingrando</li> -->
         </ul><!-- .communication-directory -->
 
+        <rise-google-sheet
+        key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
+        id="googleSheetRehabCounsellingList"
+        min-row="1"
+        tab-id="19"></rise-google-sheet>
+
         <ul class="rehabCounselling-directory" id="rehabCounselling-directory">
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Bill Crimando</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">D. Shane Koch</li>
+          <li class="rehabCounselling-directory-name"></li>
+        <!--   <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">D. Shane Koch</li>
           <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Anne Melvin</li>
           <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Jane Nicols</li>
           <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Stacia Robertson</li>
           <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Tom Upton</li>
           <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Keith Wilson</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Ian Ruark</li>
+          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Ian Ruark</li> -->
         </ul><!-- .rehabCounselling-directory -->
 
 
@@ -326,13 +369,15 @@
       </div>
     </div><!-- .list-area -->
     <div class="card-area">
-      <div class="back-button"></div>
+      <div class="back-button">
+        <img src="backArrow.svg" alt="arrow pointing right">
+      </div>
       <div class="card-display">
 
       <!-- Level one card lists -->
 
         <div class="cards-mainList">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Departments</h2>
           </div>
           <div class="card">
@@ -346,13 +391,13 @@
           </div>
           <div class="card">
             <h2>Conference Rooms</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-mainList -->
 
     <!-- Level Two cards lists -->
 
         <div class="cards-departments">
-          <div class="card">
+        <!--   <div class="card">
             <h2>Undergraduate Advisement</h2>
           </div>
           <div class="card">
@@ -366,11 +411,11 @@
           </div>
           <div class="card">
             <h2>Department of Management</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-departments -->
 
         <div class="cards-faculty">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Mavis Adjei</h2>
           </div>
           <div class="card">
@@ -384,11 +429,11 @@
           </div>
           <div class="card">
             <h2>Valerie Boyer</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-faculty -->
 
         <div class="cards-staff">
-          <div class="card">
+         <!--  <div class="card">
             <h2>Xiaoxin Beardsley</h2>
           </div>
           <div class="card">
@@ -402,11 +447,11 @@
           </div>
           <div class="card">
             <h2>Diane Frew</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-staff -->
 
         <div class="cards-classrooms">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Academic Success Center</h2>
           </div>
           <div class="card">
@@ -426,11 +471,11 @@
           </div>
           <div class="card">
             <h2>Kraft Trading Room</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-classrooms -->
 
         <div class="cards-conferenceRooms">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Dean's Conference Room</h2>
           </div>
           <div class="card">
@@ -447,7 +492,7 @@
           </div>
           <div class="card">
             <h2>School of Accountancy Conference Room</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-conferenceRooms -->
 
         <!-- Level Three cards lists -->
@@ -555,7 +600,7 @@
         </div><!-- .cards-marketing -->
 
         <div class="cards-accounting">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Alice Nobel-Allgire</h2>
           </div>
           <div class="card">
@@ -569,11 +614,11 @@
           </div>
           <div class="card">
             <h2>Darla Karnes</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-accounting -->
 
         <div class="cards-technology">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Bruce Fisher</h2>
           </div>
           <div class="card">
@@ -581,26 +626,26 @@
           </div>
           <div class="card">
             <h2>Travis Zettler</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-technology -->
 
         <div class="cards-minority">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Michael Haywood</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-minority -->
 
         <div class="cards-rehabInstitute">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Carl Flowers</h2>
           </div>
           <div class="card">
             <h2>Eva Pregowski</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-rehabInstitute -->
 
         <div class="cards-behaviour">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Mark Dixon</h2>
           </div>
           <div class="card">
@@ -617,11 +662,11 @@
           </div>
           <div class="card">
             <h2>Charlene Burrell</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-behaviour -->
 
         <div class="cards-communication">
-          <div class="card">
+          <!-- <div class="card">
             <h2>Salim Al-Ani</h2>
           </div>
           <div class="card">
@@ -635,11 +680,11 @@
           </div>
           <div class="card">
             <h2>Atheana Muzin</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-communication -->
 
         <div class="cards-rehabCounselling">
-          <div class="card">
+         <!--  <div class="card">
             <h2>Bill Crimando</h2>
           </div>
           <div class="card">
@@ -656,7 +701,7 @@
           </div>
           <div class="card">
             <h2>Tom Upton</h2>
-          </div>
+          </div> -->
         </div><!-- .cards-rehabCounselling -->
 
       </div>
@@ -664,8 +709,8 @@
   </div>
 
 </body>
-
-<script src="src/scripts/navigation.js"></script>
+<script src="build/scripts/all.min.js"></script>
+<!-- <script src="src/scripts/navigation.js"></script>
 <script src="src/scripts/directory.js"></script>
 <script src="src/scripts/departments.js"></script>
 <script src="src/scripts/faculty.js"></script>
@@ -678,5 +723,13 @@
 <script src="src/scripts/management.js"></script>
 <script src="src/scripts/finance.js"></script>
 <script src="src/scripts/marketing.js"></script>
-<script src="src/scripts/main.js"></script>
+<script src="src/scripts/accounting.js"></script>
+<script src="src/scripts/tech.js"></script>
+<script src="src/scripts/minority.js"></script>
+<script src="src/scripts/rehabInstitute.js"></script>
+<script src="src/scripts/behaviour.js"></script>
+<script src="src/scripts/communication.js"></script>
+<script src="src/scripts/rehabCounselling.js"></script>
+
+<script src="src/scripts/main.js"></script> -->
 </html>

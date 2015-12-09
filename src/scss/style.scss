@@ -8,9 +8,21 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 // color variables
 $white : #EFEFEF;
 $black : #333;
-$listBackground: #22313F;
-$cardBackground: #34495E;
-$backButton: #9B59B6;
+$listBackground: #333333;
+$cardBackground: #666666;
+$backButton: #620004;
+
+//keyframes
+@keyframes rotation1 {
+  0%{transform:rotate(0deg);}
+  80%{transform:rotate(60deg);}
+  100%{transform:rotate(45deg);}
+}
+@keyframes rotation2 {
+  0%{transform:rotate(0deg);}
+  80%{transform:rotate(-60deg);}
+  100%{transform:rotate(-45deg);}
+}
 
 // mixins
 @mixin list-style {
@@ -40,7 +52,6 @@ body {
 
   .breadcrumb-area {
     width:100%;
-    border:1px solid red;
     padding:2vh 1vw;
     position: absolute;
     top:0;
@@ -51,10 +62,23 @@ body {
 
       li {
         display: inline-block;
-        padding-left: 1vw;
+        padding-left: 1.5vw;
+        position: relative;
       }
       li:first-of-type{
         padding-left: 0;
+      }
+
+      li:nth-of-type(n+2){
+        &:before {
+          content:"";
+          position: absolute;
+          left:8px;
+          top:7px;
+          width:10px;
+          height:5px;
+          background-color: $backButton;
+        }
       }
     }
   }
@@ -65,7 +89,6 @@ body {
     margin-top: 5vh;
     width:100%;
     height:80vh;
-    border:1px solid green;
     position: relative;
     top:10vh;
     left:0;
@@ -114,6 +137,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.faculty-directory
 
@@ -128,6 +153,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.staff-directory
 
@@ -142,6 +169,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.classroom-directory
 
@@ -156,6 +185,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.conferenceRoom-directory
 
@@ -192,6 +223,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.undergraduateAdvisement-directory
 
@@ -207,6 +240,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.deansOffice-directory
 
@@ -222,6 +257,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.departmentManagement-directory
 
@@ -237,6 +274,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.finance-directory
 
@@ -252,6 +291,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.marketing-directory
 
@@ -267,6 +308,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.accounting-directory
 
@@ -282,6 +325,8 @@ body {
       li {
         font-size: 2vw;
         margin-bottom: 2vh;
+        position: relative;
+        right:-500px;
       }
     }//.tech-directory
 
@@ -295,6 +340,7 @@ body {
   float:left;
   position: relative;
   z-index:100;
+  box-shadow: -5px 0 10px rgba(0,0,0,0.5);
 
 
   .card-display {
@@ -326,21 +372,40 @@ body {
     padding-top: 2vh;
     text-align: center;
     flex:0 1 auto;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
   }
 
 
 
   .back-button {
-    width:70px;
-    height:70px;
+    width:120px;
+    height:120px;
     background-color: $backButton;
     position: absolute;
     top:2vw;
     right:2vw;
     border-radius: 50%;
     z-index: 1000;
-    box-shadow: 2px 4px 6px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
     display: none;
+
+    img {
+      width:70%;
+      position: absolute;
+      top:35px;
+      right:20px;
+    }
+
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   width:120px;
+    //   height:120px;
+    //   z-index: 500;
+    //   background:rgba(0,0,0,0.5);
+    //   border-radius: 50%;
+    //   animation:pulse 3s ease-in-out infinite;
+    // }
   }
 }
 
@@ -369,7 +434,7 @@ body {
       .detail-image {
         width:400px;
         height:400px;
-        background-color: rebeccaPurple;
+        border:2px solid rebeccaPurple;
         float:left;
         margin:40px 80px 40px 40px;
       }
@@ -409,18 +474,48 @@ body {
       }
 
       .card-close-button {
-        width:80px;
-        height:80px;
+        width:100px;
+        height:100px;
         position: absolute;
         top:30px;
         right:30px;
         border-radius: 50%;
         background-color: cadetBlue;
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+
+        &:before{
+          content: "";
+          position: absolute;
+          left:45px;
+          top:20px;
+          transform:rotate(0deg);
+          width:10px;
+          height:60px;
+          border-radius: 5px;
+          background-color: $white;
+          z-index: 9000;
+        }
+
+        &:after{
+          content: "";
+          position: absolute;
+          left:45px;
+          top:20px;
+          transform:rotate(0deg);
+          width:10px;
+          height:60px;
+          border-radius: 5px;
+          background-color: $white;
+          z-index: 9000;
+        }
       }
     }
   }
 
-.appearAnimation {
-    // transform:translateX(-50px);
-    // -webkit-transform:translateX(-50px);
+  .card-close-button.xRotation1::before {
+    animation:rotation1 0.3s ease-in-out forwards;
+  }
+
+  .card-close-button.xRotation2::after {
+    animation:rotation2 0.3s ease-in-out forwards;
   }

@@ -6,6 +6,10 @@ $(document).ready(function(){
   var departmentsDirectory = $(".departments-directory");
 
 
+
+
+
+
   $('.main-directory').on('click','li',function() {
     slideLevel = 1;
 
@@ -37,6 +41,8 @@ $(document).ready(function(){
         $(".cards-mainList").css("display", "none");
         $(".cards-faculty").css("display","flex").attr("data-status","levelTwo");
 
+        animateLinks($('.faculty-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -50,6 +56,8 @@ $(document).ready(function(){
 
         $(".cards-mainList").css("display", "none");
         $(".cards-staff").css("display","flex").attr("data-status","levelTwo");
+
+        animateLinks($('.staff-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -65,6 +73,8 @@ $(document).ready(function(){
         $(".cards-mainList").css("display", "none");
         $(".cards-classrooms").css("display","flex").attr("data-status","levelTwo");
 
+        animateLinks($('.classroom-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -78,6 +88,8 @@ $(document).ready(function(){
 
         $(".cards-mainList").css("display", "none");
         $(".cards-conferenceRooms").css("display","flex").attr("data-status","levelTwo");
+
+        animateLinks($('.conferenceRoom-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -116,6 +128,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-graduatePrograms").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.graduatePrograms-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -129,6 +143,8 @@ $('.departments-directory').on('click','li',function() {
 
         $(".cards-departments").css("display", "none");
         $(".cards-deansOffice").css("display","flex").attr("data-status","levelThree");
+
+        animateLinks($('.deansOffice-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -144,6 +160,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-management").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.management-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -157,6 +175,8 @@ $('.departments-directory').on('click','li',function() {
 
         $(".cards-departments").css("display", "none");
         $(".cards-finance").css("display","flex").attr("data-status","levelThree");
+
+        animateLinks($('.finance-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -172,6 +192,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-marketing").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.marketing-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -185,6 +207,8 @@ $('.departments-directory').on('click','li',function() {
 
         $(".cards-departments").css("display", "none");
         $(".cards-accounting").css("display","flex").attr("data-status","levelThree");
+
+        animateLinks($('.accounting-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -200,6 +224,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-technology").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.tech-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -213,6 +239,8 @@ $('.departments-directory').on('click','li',function() {
 
         $(".cards-departments").css("display", "none");
         $(".cards-minority").css("display","flex").attr("data-status","levelThree");
+
+        animateLinks($('.minority-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -228,6 +256,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-rehabInstitute").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.rehabInstitute-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -241,6 +271,8 @@ $('.departments-directory').on('click','li',function() {
 
         $(".cards-departments").css("display", "none");
         $(".cards-behaviour").css("display","flex").attr("data-status","levelThree");
+
+        animateLinks($('.behaviour-directory li'));
 
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
@@ -256,6 +288,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-communication").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.communication-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -270,6 +304,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-departments").css("display", "none");
         $(".cards-rehabCounselling").css("display","flex").attr("data-status","levelThree");
 
+        animateLinks($('.rehabCounselling-directory li'));
+
         var sectionName = $(this).attr("data-breadcrumbs")
         var linkName = $(this).attr("data-link")
         var newBreadcrumb = "<li class="+linkName+">"+sectionName+"</li>";
@@ -281,6 +317,7 @@ $('.departments-directory').on('click','li',function() {
   // Click on the back button to move the currently viewable div back to left:25vw
 
   $(".back-button").on("click", function() {
+
     slideLevel = slideLevel -1;
     var slideStatus = $(".list ul:visible").attr('data-status');
     console.log(slideStatus);
@@ -293,6 +330,8 @@ $('.departments-directory').on('click','li',function() {
         $(".cards-mainList").css("display","flex");
         checkBreadcrumbs();
 
+        $("li:hidden").css('right','-500px');
+
       break;
 
       case 'levelThree':
@@ -301,6 +340,8 @@ $('.departments-directory').on('click','li',function() {
         $(".card-display > div:visible").css("display","none");
         $(".cards-departments").css("display","flex");
         checkBreadcrumbs();
+
+        $("li:hidden").css('right','-500px');
       break;
    }
   });
@@ -309,10 +350,10 @@ $('.departments-directory').on('click','li',function() {
   //animation function for individual links
 
   function animateLinks(links){
-    links.each(function(i) {
-           delay =(i)*100;
+      links.each(function(i) {
+           delay =(i)*30;
            setTimeout(function (li) {
-                    li.animate({right:'0'});
+                    li.stop(true,true).animate({right:'0px'});
                 }, delay, $(this));
         });
   };
@@ -339,29 +380,74 @@ $('.departments-directory').on('click','li',function() {
   }
 
   $('.card-display').on('click','.card', function() {
+
+    $('.card-close-button').addClass('xRotation1 xRotation2');
+
     $('.card-modal').css('display', 'block');
-    // var profileImage = $(this).data('image');
+    var profileImage = $(this).data('image');
     var profileName = $(this).data('name');
     var profileDepartment = $(this).data('dept');
     var profilePosition = $(this).data('position');
+    if (!$(this).hasClass('department-only')){
     var profilePhone = "Phone: " + $(this).data('phone');
     var profileRoom = "Room: " + $(this).data('room');
-    // $('.main-card-content img').attr('src',profileImage);
+    } else {
+    var profileRoom = "Room" + $(this).data('room');
+    }
+    $('.card-detail-area img').attr('src',profileImage);
     $('.detail-name').text(profileName);
     $('.detail-position').text(profilePosition);
     $('.detail-department').text(profileDepartment);
     $('.detail-phone').text(profilePhone);
     $('.detail-room').text(profileRoom);
+    $( "p:contains('---')" ).css( "visibility", "hidden" );
   });
 
   $('.card-close-button').on('click', function() {
+
+     $('.card-close-button').removeClass('xRotation1 xRotation2');
+
     $('.card-modal').css('display', 'none');
-    // $('.main-card-content img').attr('src',"");
+    $('.card-detail-area img').attr('src',"");
      $('.detail-name').text("");
     $('.detail-position').text("");
     $('.detail-department').text("");
     $('.detail-phone').text("");
     $('.detail-room').text("");
   })
+
+
+  //reset to initial lists if no activity after 60 seconds
+
+  var activityTimeout = setTimeout(inActive, 60000);
+
+function resetActive(){
+    // $(document.body).attr('class', 'active');
+    console.log('active');
+    clearTimeout(activityTimeout);
+    activityTimeout = setTimeout(inActive, 60000);
+}
+
+// No activity do something.
+function inActive(){
+    $(".list ul:visible").css("display","none");
+    $(".main-directory").css("display","block");
+    $(".card-display > div:visible").css("display","none");
+    $(".cards-mainList").css("display","flex");
+    $('.card-modal').css('display', 'none');
+    $('.detail-name').text("");
+    $('.detail-position').text("");
+    $('.detail-department').text("");
+    $('.detail-phone').text("");
+    $('.detail-room').text("");
+    if($(".breadcrumbs > li").length > 1){
+      $(".breadcrumbs li:gt(0)").css('display','none');
+    }
+    $('.back-button').css('display','none');
+    console.log('inactive');
+}
+
+// Check for mousemove, could add other events here such as checking for key presses ect.
+$(document).bind('click', function(){resetActive()});
 
 });
