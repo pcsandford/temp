@@ -55,6 +55,7 @@ RiseVision.RehabInstituteDirectory = (function() {
     rehabInstitute.room = getCell(++index, cells);
     rehabInstitute.dept = getCell(++index, cells);
     rehabInstitute.position = getCell(++index, cells);
+    rehabInstitute.image = getCell(++index, cells);
 
 
     return rehabInstitute;
@@ -94,19 +95,8 @@ RiseVision.RehabInstituteDirectory = (function() {
 
         rehabInstituteEntry = document.createElement("li");
         rehabInstituteEntry.className = "rehabInstitute-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
+
         rehabInstituteEntry.textContent = rehabInstituteNames[i].firstName + " " + rehabInstituteNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $rehabInstituteList.append(rehabInstituteEntry);
 
@@ -118,11 +108,10 @@ RiseVision.RehabInstituteDirectory = (function() {
         rehabInstituteCard.setAttribute("data-phone", rehabInstituteNames[i].phone);
         rehabInstituteCard.setAttribute("data-room", rehabInstituteNames[i].room);
 
+        var rehabInstituteImage = rehabInstituteNames[i].image;
+        rehabInstituteCard.setAttribute("data-image", rehabInstituteImage);
 
-
-
-
-        rehabInstituteCard.innerHTML = "<h2>"+rehabInstituteEntry.textContent+"</h2>";
+        rehabInstituteCard.innerHTML = "<img src='"+ rehabInstituteImage +"'><h2>"+rehabInstituteEntry.textContent+"</h2>";
 
         $rehabInstituteCards.append(rehabInstituteCard);
       }

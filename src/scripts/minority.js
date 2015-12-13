@@ -55,7 +55,7 @@ RiseVision.MinorityDirectory = (function() {
     minority.room = getCell(++index, cells);
     minority.dept = getCell(++index, cells);
     minority.position = getCell(++index, cells);
-
+    minority.image = getCell(++index, cells);
 
     return minority;
   }
@@ -94,19 +94,7 @@ RiseVision.MinorityDirectory = (function() {
 
         minorityEntry = document.createElement("li");
         minorityEntry.className = "minority-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         minorityEntry.textContent = minorityNames[i].firstName + " " +minorityNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $minorityList.append(minorityEntry);
 
@@ -118,11 +106,10 @@ RiseVision.MinorityDirectory = (function() {
         minorityCard.setAttribute("data-phone", minorityNames[i].phone);
         minorityCard.setAttribute("data-room", minorityNames[i].room);
 
+        var minorityImage = minorityNames[i].image;
+        minorityCard.setAttribute("data-image", minorityImage);
 
-
-
-
-        minorityCard.innerHTML = "<h2>"+minorityEntry.textContent+"</h2>";
+        minorityCard.innerHTML = "<img src='"+ minorityImage +"'><h2>"+minorityEntry.textContent+"</h2>";
 
         $minorityCards.append(minorityCard);
       }

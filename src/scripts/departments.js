@@ -52,6 +52,7 @@ RiseVision.DepartmentsDirectory = (function() {
     individualDept.name = getCell(index, cells);
     individualDept.link = getCell(++index, cells);
     individualDept.room = getCell(++index, cells);
+    individualDept.image = getCell(++index, cells);
 
 
     return individualDept;
@@ -106,7 +107,10 @@ RiseVision.DepartmentsDirectory = (function() {
         departmentCard.setAttribute("data-name", departmentEntry.textContent);
         departmentCard.setAttribute("data-room", departments[i].room);
 
-        departmentCard.innerHTML = "<h2>"+departmentEntry.textContent+"</h2>";
+        var cardImage = departments[i].image
+        departmentCard.setAttribute("data-image", cardImage);
+
+        departmentCard.innerHTML = "<img src='"+cardImage+"'><h2>"+departmentEntry.textContent+"</h2>";
 
         $departmentCards.append(departmentCard);
       }

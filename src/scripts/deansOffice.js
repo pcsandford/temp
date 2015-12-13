@@ -55,6 +55,7 @@ RiseVision.DeansOfficeDirectory = (function() {
     deansOffice.room = getCell(++index, cells);
     deansOffice.dept = getCell(++index, cells);
     deansOffice.position = getCell(++index, cells);
+    deansOffice.image = getCell(++index, cells);
 
 
     return deansOffice;
@@ -94,19 +95,7 @@ RiseVision.DeansOfficeDirectory = (function() {
 
         deansOfficeEntry = document.createElement("li");
         deansOfficeEntry.className = "deansOffice-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         deansOfficeEntry.textContent = deansOfficeNames[i].firstName + " " +deansOfficeNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $deansOfficeList.append(deansOfficeEntry);
 
@@ -118,11 +107,10 @@ RiseVision.DeansOfficeDirectory = (function() {
         deansOfficeCard.setAttribute("data-phone", deansOfficeNames[i].phone);
         deansOfficeCard.setAttribute("data-room", deansOfficeNames[i].room);
 
+        var deansOfficeImage = deansOfficeNames[i].image;
+        deansOfficeCard.setAttribute("data-image", deansOfficeImage);
 
-
-
-
-        deansOfficeCard.innerHTML = "<h2>"+deansOfficeEntry.textContent+"</h2>";
+        deansOfficeCard.innerHTML = "<img src='"+ deansOfficeImage +"'><h2>"+deansOfficeEntry.textContent+"</h2>";
 
         $deansOfficeCards.append(deansOfficeCard);
 

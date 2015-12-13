@@ -55,6 +55,7 @@ RiseVision.AdvisementDirectory = (function() {
     advisementDept.room = getCell(++index, cells);
     advisementDept.dept = getCell(++index, cells);
     advisementDept.position = getCell(++index, cells);
+    advisementDept.image = getCell(++index, cells);
 
 
     return advisementDept;
@@ -94,19 +95,7 @@ RiseVision.AdvisementDirectory = (function() {
 
         advisementEntry = document.createElement("li");
         advisementEntry.className = "department-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         advisementEntry.textContent = advisementNames[i].firstName + " " +advisementNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $advisementList.append(advisementEntry);
 
@@ -117,12 +106,14 @@ RiseVision.AdvisementDirectory = (function() {
         advisementCard.setAttribute("data-position", advisementNames[i].position);
         advisementCard.setAttribute("data-phone", advisementNames[i].phone);
         advisementCard.setAttribute("data-room", advisementNames[i].room);
+        var advisementImage = advisementNames[i].image;
+        advisementCard.setAttribute("data-image", advisementImage);
 
 
 
 
 
-        advisementCard.innerHTML = "<h2>"+advisementEntry.textContent+"</h2>";
+        advisementCard.innerHTML = "<img src='"+ advisementImage +"'><h2>"+advisementEntry.textContent+"</h2>";
 
         $advisementCards.append(advisementCard);
 

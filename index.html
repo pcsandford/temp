@@ -10,6 +10,9 @@
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+  <!-- Font -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+
   <!-- stylesheet -->
   <link rel="stylesheet" href="build/style.css">
 </head>
@@ -20,10 +23,10 @@
         <div class="card-close-button"></div>
         <img class="detail-image" src="" alt="">
         <h2 class="detail-name"></h2>
-        <p class="detail-position"></p>
-        <p class="detail-department"></p>
         <p class="detail-phone"><span></span></p>
         <p class="detail-room"><span></span></p>
+        <p class="detail-position"></p>
+        <p class="detail-department"></p>
       </div>
     </div>
     <div class="list-area">
@@ -32,6 +35,8 @@
           <li class="home-link">Home</li>
         </ul>
       </div><!-- .breadcrumb-area -->
+      <div id="scroll-area">
+      <div class="page">
       <rise-google-sheet
       key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
       id="googleSheetMainList"
@@ -46,10 +51,6 @@
 
         <ul class="main-directory" id="main-directory">
           <li class="main-directory-departments"></li>
-          <!-- <li class="main-directory-faculty" data-link="faculty-link" data-breadcrumbs="Faculty">Faculty</li>
-          <li class="main-directory-staff" data-link="staff-link" data-breadcrumbs="Staff">Staff</li>
-          <li class="main-directory-classrooms" data-link="classrooms-link" data-breadcrumbs="Classrooms">Classrooms</li>
-          <li class="main-directory-conferenceRooms" data-link="conferenceRooms-link" data-breadcrumbs="Conference Rooms">Conference Rooms</li> -->
         </ul><!-- .main-directory -->
 
         <!-- =======
@@ -64,30 +65,8 @@
 
         <ul class="departments-directory" id="departments-directory">
           <li class="undergraduateAdvisement-directoryName"></li>
-          <!-- <li class="undergraduateAdvisement-directoryName" data-link="departments-detail-link" data-breadcrumbs="Undergraduate Advisement">Undergraduate Advisement</li>
-          <li class="graduatePrograms-directoryName" data-link="departments-detail-link" data-breadcrumbs="Graduate Programs">Graduate Programs</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Placement Center</li>
-          <li class="deansOffice-directoryName" data-link="departments-detail-link" data-breadcrumbs="Dean's Office">Dean's Office</li>
-          <li class="departmentManagement-directoryName" data-link="departments-detail-link" data-breadcrumbs="Department of Management">Department of Management</li>
-          <li class="finance-directoryName" data-link="departments-detail-link" data-breadcrumbs="Department of Finance">Department of Finance</li>
-          <li class="marketing-directoryName" data-link="departments-detail-link" data-breadcrumbs="Department of Marketing">Department of Marketing</li>
-          <li class="accounting-directoryName" data-link="departments-detail-link" data-breadcrumbs="School of Accountancy">School of Accountancy</li>
-          <li class="tech-directoryName" data-link="departments-detail-link" data-breadcrumbs="Tech Support">Tech Support</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Computer Labs</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Academic Success Center</li>
-          <li class="minority-directoryName" data-link="departments-detail-link" data-breadcrumbs="Minority Affairs">Minority Affairs</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Recruitment & Retention</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Trading Room</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Dean's Conference Room</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Placement Center Conference Room</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Management Dept Conference Room</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">Finance Dept Conference Room</li>
-          <li class="departments-directory-name" data-link="departments-detail-link">School of Accountancy Conference Room</li>
-          <li class="rehabInstitute-directoryName" data-link="departments-detail-link" data-breadcrumbs="Rehabilitation Institute">Rehabilitation Institute</li>
-          <li class="behaviour-directoryName" data-link="departments-detail-link" data-breadcrumbs="Behaviour Analysis and Therapy Program">Behaviour Analysis and Therapy Program</li>
-          <li class="communication-directoryName" data-link="departments-detail-link" data-breadcrumbs="Communication Disorders and Sciences Program">Communication Disorders and Sciences Program</li>
-          <li class="rehabCounselling-directoryName" data-link="departments-detail-link" data-breadcrumbs="Rehabilitation Counseling and Administration Program">Rehabilitation Counseling and Administration Program</li> -->
         </ul><!-- .departments-directory -->
+
         <rise-google-sheet
         key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
         id="googleSheetFacultyList"
@@ -95,35 +74,6 @@
         tab-id="2"></rise-google-sheet>
         <ul class="faculty-directory" id="faculty-directory">
           <li class="faculty-name"></li>
-         <!--  <li class="faculty-directory-name" data-link="faculty-detail-link">Mavis Adjei</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Salim Al-Ani</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Amaka Anaza</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Xiaoxin Beardsley</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Valerie Boyer</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Royce Burnett</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Min Carter</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Hyeong-Gyu Chiu</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Terry Clark</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Bill Crimando</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Ye Dai</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Saiying Deng</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Greg DeYong</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Mark Dickson</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Carl Flowers</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">John Fraedrich</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Maria Claudia Franca</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">John Goodale</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Jason Green</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Scott Hendricks</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Jason Hirst</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Gregg Hoffeditz</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Cheryl Jarvis</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Erica Jowett Hirst</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Steven Karau</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">
-          Allan Karnes</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Darla Karnes</li>
-          <li class="faculty-directory-name" data-link="faculty-detail-link">Lyn Knowles</li> -->
         </ul><!-- .faculty-directory -->
 
         <rise-google-sheet
@@ -133,14 +83,6 @@
         tab-id="7"></rise-google-sheet>
         <ul class="staff-directory" id="staff-directory">
           <li class="staff-name"></li>
-         <!--  <li class="staff-directory-name" data-link="staff-detail-link">Charlene Burrell</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Sheila Dingrando</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Bruce Fisher</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Diane Frew</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Shari Garnett</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Jill Gebke</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Jill Gobert</li>
-          <li class="staff-directory-name" data-link="staff-detail-link">Leslee Hammers</li> -->
         </ul><!-- .staff-directory -->
 
         <rise-google-sheet
@@ -149,14 +91,9 @@
         min-row="1"
         tab-id="5"></rise-google-sheet>
         <ul class="classroom-directory" id="classroom-directory">
-          <li class="classroom-name"</li>
-        <!--   <li class="classroom-directory-name" data-link="classroom-detail-link">Classroom</li>
-          <li class="classroom-directory-name" data-link="classroom-detail-link">Classroom</li>
-          <li class="classroom-directory-name" data-link="classroom-detail-link">Arthur Andersen Classroom</li>
-          <li class="classroom-directory-name" data-link="classroom-detail-link">Classroom</li>
-          <li class="classroom-directory-name" data-link="classroom-detail-link">IT Computer Lab</li>
-          <li class="classroom-directory-name" data-link="classroom-detail-link">Kraft Trading Room</li> -->
+          <li class="classroom-name"></li>
         </ul><!-- .classroom-directory -->
+
          <rise-google-sheet
         key="1BRwbkD2AeNsTZrcQUAsWVu5VF6QB3oLI8QM1ciaVIyU"
         id="googleSheetConferenceRoomList"
@@ -164,11 +101,6 @@
         tab-id="6"></rise-google-sheet>
         <ul class="conferenceRoom-directory" id="conferenceRoom-directory">
           <li class="conferenceRoom--name"></li>
-          <!-- <li class="conferenceRoom-directory-name" data-link="conferenceRoom-detail-link">Finance Dept Conference Room</li>
-          <li class="conferenceRoom-directory-name" data-link="conferenceRoom-detail-link">Management Dept Conference Room</li>
-          <li class="conferenceRoom-directory-name" data-link="conferenceRoom-detail-link">Marketing Dept Conference Room</li>
-          <li class="conferenceRoom-directory-name" data-link="conferenceRoom-detail-link">Placement Center Conference Room</li>
-          <li class="conferenceRoom-directory-name" data-link="conferenceRoom-detail-link">School of Accountancy Conference Room</li> -->
         </ul><!-- .conferenceRooms-directory -->
 
         <!-- =======
@@ -191,7 +123,7 @@
         tab-id="10"></rise-google-sheet>
 
          <ul class="graduatePrograms-directory" id="graduatePrograms-directory">
-          <li class="graduatePrograms-directory-name"</li>
+          <li class="graduatePrograms-directory-name"></li>
         </ul><!-- .graduatePrograms-directory -->
 
         <rise-google-sheet
@@ -202,19 +134,6 @@
 
          <ul class="deansOffice-directory" id="deansOffice-directory">
           <li class="deansOffice-directory-name"></li>
-         <!--  <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Bruce Fisher</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Jill Gebke</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Jill Gobert</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Jason Green</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Michael Haywood</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Cheryl Burke Jarvis</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Michelle Johanson</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Christie Mitchell</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Dennis Nasco</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Ann Pearson</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Dena Stogsdill</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Lynne Westra</li>
-          <li class="deansOffice-directory-name" data-link="deansOffice-detail-link">Heather Willis</li> -->
         </ul><!-- .deansOffice-directory -->
 
         <rise-google-sheet
@@ -224,16 +143,7 @@
         tab-id="14"></rise-google-sheet>
 
          <ul class="management-directory" id="departmentManagement-directory">
-          <li class="departmentManagement-directory-name"</li>
-         <!--  <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Diane Frew</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Min Carter</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Ye Dai</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Greg DeYong</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">John Goodale</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Steven Karau</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Jim Nelson</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">Kay Nelson</li>
-          <li class="departmentManagement-directory-name" data-link="departmentManagement-detail-link">John Pearson</li> -->
+          <li class="departmentManagement-directory-name"></li>
         </ul><!-- .departmentManagement-directory -->
 
         <rise-google-sheet
@@ -244,11 +154,6 @@
 
          <ul class="finance-directory" id="finance-directory">
           <li class="finance-directory-name"></li>
-         <!--  <li class="finance-directory-name" data-link="finance-detail-link">Sharon Moore</li>
-          <li class="finance-directory-name" data-link="finance-detail-link">Xiaoxin Beardsley</li>
-          <li class="finance-directory-name" data-link="finance-detail-link">Saiying Deng</li>
-          <li class="finance-directory-name" data-link="finance-detail-link">Jason Greene</li>
-          <li class="finance-directory-name" data-link="finance-detail-link">Scott Hendricks</li> -->
         </ul><!-- .finance-directory -->
 
         <rise-google-sheet
@@ -259,12 +164,6 @@
 
         <ul class="marketing-directory" id="marketing-directory">
           <li class="marketing-directory-name"></li>
-          <!-- <li class="marketing-directory-name" data-link="marketing-detail-link">Marge Smith</li>
-          <li class="marketing-directory-name" data-link="marketing-detail-link">Amaka Anaza</li>
-          <li class="marketing-directory-name" data-link="marketing-detail-link">Hyeong-Gyu Chu</li>
-          <li class="marketing-directory-name" data-link="marketing-detail-link">Terry Clark</li>
-          <li class="marketing-directory-name" data-link="marketing-detail-link">John Fraedrich</li>
-          <li class="marketing-directory-name" data-link="marketing-detail-link">Cheryl Jarvis</li> -->
         </ul><!-- .marketing-directory -->
 
         <rise-google-sheet
@@ -275,12 +174,6 @@
 
         <ul class="accounting-directory" id="accounting-directory">
           <li class="accounting-directory-name"></li>
-          <!-- <li class="accounting-directory-name" data-link="accounting-detail-link">Leslee Hammers</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link">Royce Burnett</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link">Allan Karnes</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link">Darla Karnes</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link">Marc Morris</li>
-          <li class="accounting-directory-name" data-link="accounting-detail-link"></li> -->
         </ul><!-- .accounting-directory -->
 
         <rise-google-sheet
@@ -291,8 +184,6 @@
 
         <ul class="tech-directory" id="tech-directory">
           <li class="tech-directory-name"></li>
-          <!-- <li class="tech-directory-name" data-link="tech-detail-link">Lynne Westra</li>
-          <li class="tech-directory-name" data-link="tech-detail-link">Travis Zettler</li> -->
         </ul><!-- .tech-directory -->
 
         <rise-google-sheet
@@ -302,7 +193,7 @@
         tab-id="9"></rise-google-sheet>
 
         <ul class="minority-directory" id="minority-directory">
-          <li class="minority-directory-name"</li>
+          <li class="minority-directory-name"></li>
         </ul><!-- .minority-directory -->
 
         <rise-google-sheet
@@ -313,7 +204,6 @@
 
         <ul class="rehabInstitute-directory" id="rehabInstitue-directory">
           <li class="rehabInstitute-directory-name"></li>
-          <!-- <li class="rehabInstitute-directory-name" data-link="rehabInstitute-detail-link">Eva Pregowski</li> -->
         </ul><!-- .rehabInstitute-directory -->
 
         <rise-google-sheet
@@ -323,12 +213,7 @@
         tab-id="17"></rise-google-sheet>
 
         <ul class="behaviour-directory" id="behaviour-directory">
-          <li class="behaviour-directory-name"</li>
-          <!-- <li class="behaviour-directory-name" data-link="behaviour-detail-link">Jason Hirst</li>
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Erica Jowett Hurst</li>
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Ryan Redner</li>
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Ruth Anne Redfeldt</li>
-          <li class="behaviour-directory-name" data-link="behaviour-detail-link">Charlene Burrell</li> -->
+          <li class="behaviour-directory-name"></li>
         </ul><!-- .behaviour-directory -->
 
         <rise-google-sheet
@@ -339,12 +224,6 @@
 
         <ul class="communication-directory" id="communication-directory">
           <li class="communication-directory-name"></li>
-         <!--  <li class="communication-directory-name" data-link="communication-detail-link">Valeri Boyer</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Maria Claudia Franca</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Kitty Martin</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Atheana Meadows</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Diane Muzio</li>
-          <li class="communication-directory-name" data-link="communication-detail-link">Sheila Dingrando</li> -->
         </ul><!-- .communication-directory -->
 
         <rise-google-sheet
@@ -355,360 +234,100 @@
 
         <ul class="rehabCounselling-directory" id="rehabCounselling-directory">
           <li class="rehabCounselling-directory-name"></li>
-        <!--   <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">D. Shane Koch</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Anne Melvin</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Jane Nicols</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Stacia Robertson</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Tom Upton</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Keith Wilson</li>
-          <li class="rehabCounselling-directory-name" data-link="rehabCounselling-detail-link">Ian Ruark</li> -->
         </ul><!-- .rehabCounselling-directory -->
 
 
 
       </div>
+      </div>
+      </div><!-- #scroll-area -->
     </div><!-- .list-area -->
     <div class="card-area">
       <div class="back-button">
         <img src="backArrow.svg" alt="arrow pointing right">
       </div>
+      <div id="card-display">
+      <div class="page">
       <div class="card-display">
+      <h2 class="text-instruction">Please select a card for further information</h2>
 
       <!-- Level one card lists -->
 
         <div class="cards-mainList">
-          <!-- <div class="card">
-            <h2>Departments</h2>
-          </div>
-          <div class="card">
-            <h2>Faculty</h2>
-          </div>
-          <div class="card">
-            <h2>Staff</h2>
-          </div>
-          <div class="card">
-            <h2>Classrooms</h2>
-          </div>
-          <div class="card">
-            <h2>Conference Rooms</h2>
-          </div> -->
         </div><!-- .cards-mainList -->
 
     <!-- Level Two cards lists -->
 
         <div class="cards-departments">
-        <!--   <div class="card">
-            <h2>Undergraduate Advisement</h2>
-          </div>
-          <div class="card">
-            <h2>Graduate Programs</h2>
-          </div>
-          <div class="card">
-            <h2>Placement Center</h2>
-          </div>
-          <div class="card">
-            <h2>Dean's Office</h2>
-          </div>
-          <div class="card">
-            <h2>Department of Management</h2>
-          </div> -->
         </div><!-- .cards-departments -->
 
         <div class="cards-faculty">
-          <!-- <div class="card">
-            <h2>Mavis Adjei</h2>
-          </div>
-          <div class="card">
-            <h2>Salim Al-Ani</h2>
-          </div>
-          <div class="card">
-            <h2>Amaka Anaza</h2>
-          </div>
-          <div class="card">
-            <h2>Xiaxin Beardsley</h2>
-          </div>
-          <div class="card">
-            <h2>Valerie Boyer</h2>
-          </div> -->
         </div><!-- .cards-faculty -->
 
         <div class="cards-staff">
-         <!--  <div class="card">
-            <h2>Xiaoxin Beardsley</h2>
-          </div>
-          <div class="card">
-            <h2>Charlene Burrell</h2>
-          </div>
-          <div class="card">
-            <h2>Sheila Dingrando</h2>
-          </div>
-          <div class="card">
-            <h2>Bruce Fisher</h2>
-          </div>
-          <div class="card">
-            <h2>Diane Frew</h2>
-          </div> -->
         </div><!-- .cards-staff -->
 
         <div class="cards-classrooms">
-          <!-- <div class="card">
-            <h2>Academic Success Center</h2>
-          </div>
-          <div class="card">
-            <h2>Classroom</h2>
-          </div>
-          <div class="card">
-            <h2>Classroom</h2>
-          </div>
-          <div class="card">
-            <h2>Arthur Andersen Classroom</h2>
-          </div>
-          <div class="card">
-            <h2>Classroom</h2>
-          </div>
-          <div class="card">
-            <h2>IT Computer Lab</h2>
-          </div>
-          <div class="card">
-            <h2>Kraft Trading Room</h2>
-          </div> -->
         </div><!-- .cards-classrooms -->
 
         <div class="cards-conferenceRooms">
-          <!-- <div class="card">
-            <h2>Dean's Conference Room</h2>
-          </div>
-          <div class="card">
-            <h2>Finance Dept Conference Room</h2>
-          </div>
-          <div class="card">
-            <h2>Management Dept Conference Room</h2>
-          </div>
-          <div class="card">
-            <h2>Marketing Dept Conference Room</h2>
-          </div>
-          <div class="card">
-            <h2>Placement Center Conference Room</h2>
-          </div>
-          <div class="card">
-            <h2>School of Accountancy Conference Room</h2>
-          </div> -->
         </div><!-- .cards-conferenceRooms -->
 
         <!-- Level Three cards lists -->
 
         <div class="cards-undergraduateAdvisement">
-         <!--  <div class="card" data-name="Kim Little" data-dept="Undergrad Advisement" data-position="Acting Chief Academic Advisor" data-phone="618/453-7956" data-room="131">
-            <h2>Kim Little</h2>
-          </div>
-          <div class="card" data-name="Rachel Richey" data-dept="Undergrad Advisement" data-position="Director" data-phone="618/453-7494" data-room="131A">
-            <h2>Rachel Richey</h2>
-          </div>
-          <div class="card" data-name="Emily Morgan" data-dept="Undergrad Advisement" data-position="Academic Advisor" data-phone="618/453-4431" data-room="121">
-            <h2>Emily Morgan</h2>
-          </div>
-          <div class="card">
-            <h2>Joe Pineau</h2>
-          </div>
-          <div class="card">
-            <h2>Bridgette Sargent</h2>
-          </div> -->
         </div><!-- .cards-undergraduateAdvisement -->
 
         <div class="cards-graduatePrograms">
-          <!-- <div class="card">
-            <h2>Xiaoxin Beardsley</h2>
-          </div>
-          <div class="card">
-            <h2>Nicholas Hoffman</h2>
-          </div>
-          <div class="card">
-            <h2>Jeffery Reece</h2>
-          </div> -->
         </div><!-- .cards-graduatePrograms -->
 
         <div class="cards-deansOffice">
-          <!-- <div class="card">
-            <h2>Bruce Fisher</h2>
-          </div>
-          <div class="card">
-            <h2>Jill Gebke</h2>
-          </div>
-          <div class="card">
-            <h2>Jill Gobert</h2>
-          </div>
-          <div class="card">
-            <h2>Jason Greene</h2>
-          </div>
-          <div class="card">
-            <h2>Michael Haywood</h2>
-          </div> -->
         </div><!-- .cards-deansOffice -->
 
         <div class="cards-management">
-         <!--  <div class="card">
-            <h2>Peter Mykytyn</h2>
-          </div>
-          <div class="card">
-            <h2>Diane Frew</h2>
-          </div>
-          <div class="card">
-            <h2>Min Carter</h2>
-          </div>
-          <div class="card">
-            <h2>Ye Dai</h2>
-          </div>
-          <div class="card">
-            <h2>Greg DeYong</h2>
-          </div> -->
         </div><!-- .cards-management -->
 
         <div class="cards-finance">
-          <!-- <div class="card">
-            <h2>Mark Peterson</h2>
-          </div>
-          <div class="card">
-            <h2>Sharon Moore</h2>
-          </div>
-          <div class="card">
-            <h2>Xiaoxin Beardsley</h2>
-          </div>
-          <div class="card">
-            <h2>Saiying Deng</h2>
-          </div>
-          <div class="card">
-            <h2>Jason Greene</h2>
-          </div> -->
         </div><!-- .cards-finance -->
 
         <div class="cards-marketing">
-          <!-- <div class="card">
-            <h2>Mavis Adjei</h2>
-          </div>
-          <div class="card">
-            <h2>Marge Smith</h2>
-          </div>
-          <div class="card">
-            <h2>Amaka Anaza</h2>
-          </div>
-          <div class="card">
-            <h2>Hyeong-Gyu Chiu</h2>
-          </div>
-          <div class="card">
-            <h2>Terry Clark</h2>
-          </div> -->
         </div><!-- .cards-marketing -->
 
         <div class="cards-accounting">
-          <!-- <div class="card">
-            <h2>Alice Nobel-Allgire</h2>
-          </div>
-          <div class="card">
-            <h2>Leslee Hammers</h2>
-          </div>
-          <div class="card">
-            <h2>Royce Burnett</h2>
-          </div>
-          <div class="card">
-            <h2>Allan Karnes</h2>
-          </div>
-          <div class="card">
-            <h2>Darla Karnes</h2>
-          </div> -->
         </div><!-- .cards-accounting -->
 
         <div class="cards-technology">
-          <!-- <div class="card">
-            <h2>Bruce Fisher</h2>
-          </div>
-          <div class="card">
-            <h2>Lynee Westra</h2>
-          </div>
-          <div class="card">
-            <h2>Travis Zettler</h2>
-          </div> -->
         </div><!-- .cards-technology -->
 
         <div class="cards-minority">
-          <!-- <div class="card">
-            <h2>Michael Haywood</h2>
-          </div> -->
         </div><!-- .cards-minority -->
 
         <div class="cards-rehabInstitute">
-          <!-- <div class="card">
-            <h2>Carl Flowers</h2>
-          </div>
-          <div class="card">
-            <h2>Eva Pregowski</h2>
-          </div> -->
         </div><!-- .cards-rehabInstitute -->
 
         <div class="cards-behaviour">
-          <!-- <div class="card">
-            <h2>Mark Dixon</h2>
-          </div>
-          <div class="card">
-            <h2>Jason Hirst</h2>
-          </div>
-          <div class="card">
-            <h2>Erica Jowett-Hirst</h2>
-          </div>
-          <div class="card">
-            <h2>Ryan Redner</h2>
-          </div>
-          <div class="card">
-            <h2>Ruth Anne Redfeldt</h2>
-          </div>
-          <div class="card">
-            <h2>Charlene Burrell</h2>
-          </div> -->
         </div><!-- .cards-behaviour -->
 
         <div class="cards-communication">
-          <!-- <div class="card">
-            <h2>Salim Al-Ani</h2>
-          </div>
-          <div class="card">
-            <h2>Valerie Boyer</h2>
-          </div>
-          <div class="card">
-            <h2>Maria Claudia Franca</h2>
-          </div>
-          <div class="card">
-            <h2>Kitty Martin</h2>
-          </div>
-          <div class="card">
-            <h2>Atheana Muzin</h2>
-          </div> -->
         </div><!-- .cards-communication -->
 
         <div class="cards-rehabCounselling">
-         <!--  <div class="card">
-            <h2>Bill Crimando</h2>
-          </div>
-          <div class="card">
-            <h2>D. Shane Koch</h2>
-          </div>
-          <div class="card">
-            <h2>Ann Melvin</h2>
-          </div>
-          <div class="card">
-            <h2>Jane Nichols</h2>
-          </div>
-          <div class="card">
-            <h2>Stacia Robertson</h2>
-          </div>
-          <div class="card">
-            <h2>Tom Upton</h2>
-          </div> -->
         </div><!-- .cards-rehabCounselling -->
 
+      </div><!-- .cards-display -->
+      </div>
       </div>
     </div>
   </div>
 
 </body>
+<!-- autoscroll dependencies -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
+<script src="build/scripts/autoscroll.js"></script>
 <script src="build/scripts/all.min.js"></script>
 <!-- <script src="src/scripts/navigation.js"></script>
 <script src="src/scripts/directory.js"></script>

@@ -54,6 +54,7 @@ RiseVision.StaffDirectory = (function() {
     individualStaff.phone = getCell(++index, cells);
     individualStaff.room = getCell(++index, cells);
     individualStaff.dept = getCell(++index, cells);
+    individualStaff.image = getCell(++index, cells);
 
     return individualStaff;
   }
@@ -106,7 +107,10 @@ RiseVision.StaffDirectory = (function() {
         staffCard.setAttribute("data-phone", staff[i].phone);
         staffCard.setAttribute("data-room", staff[i].room);
 
-        staffCard.innerHTML = "<h2>"+staffEntry.textContent+"</h2>";
+        var staffImage = staff[i].image;
+        staffCard.setAttribute("data-image", staffImage);
+
+        staffCard.innerHTML = "<img src='"+ staffImage +"'><h2>"+staffEntry.textContent+"</h2>";
 
         $staffCards.append(staffCard);
       }

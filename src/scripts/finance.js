@@ -55,6 +55,7 @@ RiseVision.FinanceDirectory = (function() {
     finance.room = getCell(++index, cells);
     finance.dept = getCell(++index, cells);
     finance.position = getCell(++index, cells);
+    finance.image = getCell(++index, cells);
 
 
     return finance;
@@ -106,11 +107,10 @@ RiseVision.FinanceDirectory = (function() {
         financeCard.setAttribute("data-phone", financeNames[i].phone);
         financeCard.setAttribute("data-room", financeNames[i].room);
 
+        var financeImage = financeNames[i].image;
+        financeCard.setAttribute("data-image", financeImage);
 
-
-
-
-        financeCard.innerHTML = "<h2>"+financeEntry.textContent+"</h2>";
+        financeCard.innerHTML = "<img src='"+ financeImage +"'><h2>"+financeEntry.textContent+"</h2>";
 
         $financeCards.append(financeCard);
 

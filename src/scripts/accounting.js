@@ -55,6 +55,7 @@ RiseVision.AccountingDirectory = (function() {
     accounting.room = getCell(++index, cells);
     accounting.dept = getCell(++index, cells);
     accounting.position = getCell(++index, cells);
+    accounting.image = getCell(++index, cells);
 
 
     return accounting;
@@ -94,19 +95,7 @@ RiseVision.AccountingDirectory = (function() {
 
         accountingEntry = document.createElement("li");
         accountingEntry.className = "management-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         accountingEntry.textContent = accountingNames[i].firstName + " " +accountingNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $accountingList.append(accountingEntry);
 
@@ -118,11 +107,10 @@ RiseVision.AccountingDirectory = (function() {
         accountingCard.setAttribute("data-phone", accountingNames[i].phone);
         accountingCard.setAttribute("data-room", accountingNames[i].room);
 
+        var accountingImage = accountingNames[i].image;
+        accountingCard.setAttribute("data-image", accountingImage);
 
-
-
-
-        accountingCard.innerHTML = "<h2>"+accountingEntry.textContent+"</h2>";
+        accountingCard.innerHTML = "<img src='"+ accountingImage +"'><h2>"+accountingEntry.textContent+"</h2>";
 
         $accountingCards.append(accountingCard);
 

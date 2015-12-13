@@ -55,7 +55,7 @@ RiseVision.RehabCounsellingDirectory = (function() {
     rehabCounselling.room = getCell(++index, cells);
     rehabCounselling.dept = getCell(++index, cells);
     rehabCounselling.position = getCell(++index, cells);
-
+    rehabCounselling.image = getCell(++index, cells);
 
     return rehabCounselling;
   }
@@ -94,19 +94,8 @@ RiseVision.RehabCounsellingDirectory = (function() {
 
         rehabCounsellingEntry = document.createElement("li");
         rehabCounsellingEntry.className = "rehabCounselling-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
+
         rehabCounsellingEntry.textContent = rehabCounsellingNames[i].firstName + " " + rehabCounsellingNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $rehabCounsellingList.append(rehabCounsellingEntry);
 
@@ -118,11 +107,10 @@ RiseVision.RehabCounsellingDirectory = (function() {
         rehabCounsellingCard.setAttribute("data-phone", rehabCounsellingNames[i].phone);
         rehabCounsellingCard.setAttribute("data-room", rehabCounsellingNames[i].room);
 
+        var rehabCounsellingImage = rehabCounsellingNames[i].image;
+        rehabCounsellingCard.setAttribute("data-image", rehabCounsellingImage);
 
-
-
-
-        rehabCounsellingCard.innerHTML = "<h2>"+rehabCounsellingEntry.textContent+"</h2>";
+        rehabCounsellingCard.innerHTML = "<img src='"+ rehabCounsellingImage +"'><h2>"+rehabCounsellingEntry.textContent+"</h2>";
 
         $rehabCounsellingCards.append(rehabCounsellingCard);
       }

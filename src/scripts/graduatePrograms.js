@@ -55,6 +55,7 @@ RiseVision.GraduateProgramsDirectory = (function() {
     graduatePrograms.room = getCell(++index, cells);
     graduatePrograms.dept = getCell(++index, cells);
     graduatePrograms.position = getCell(++index, cells);
+    graduatePrograms.image = getCell(++index, cells);
 
 
     return graduatePrograms;
@@ -94,19 +95,7 @@ RiseVision.GraduateProgramsDirectory = (function() {
 
         graduateProgramsEntry = document.createElement("li");
         graduateProgramsEntry.className = "graduateProgram-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         graduateProgramsEntry.textContent = graduateProgramsNames[i].firstName + " " +graduateProgramsNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $graduateProgramsList.append(graduateProgramsEntry);
 
@@ -118,11 +107,10 @@ RiseVision.GraduateProgramsDirectory = (function() {
         graduateProgramsCard.setAttribute("data-phone", graduateProgramsNames[i].phone);
         graduateProgramsCard.setAttribute("data-room", graduateProgramsNames[i].room);
 
+        var graduateProgramsImage = graduateProgramsNames[i].image;
+        graduateProgramsCard.setAttribute("data-image", graduateProgramsImage);
 
-
-
-
-        graduateProgramsCard.innerHTML = "<h2>"+graduateProgramsEntry.textContent+"</h2>";
+        graduateProgramsCard.innerHTML = "<img src='"+ graduateProgramsImage +"'><h2>"+graduateProgramsEntry.textContent+"</h2>";
 
         $graduateProgramsCards.append(graduateProgramsCard);
 

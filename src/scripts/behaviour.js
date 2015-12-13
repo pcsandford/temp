@@ -55,6 +55,7 @@ RiseVision.BehaviourDirectory = (function() {
     behaviour.room = getCell(++index, cells);
     behaviour.dept = getCell(++index, cells);
     behaviour.position = getCell(++index, cells);
+    behaviour.image = getCell(++index, cells);
 
 
     return behaviour;
@@ -94,19 +95,8 @@ RiseVision.BehaviourDirectory = (function() {
 
         behaviourEntry = document.createElement("li");
         behaviourEntry.className = "behaviour-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
+
         behaviourEntry.textContent = behaviourNames[i].firstName + " " +behaviourNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $behaviourList.append(behaviourEntry);
 
@@ -118,11 +108,10 @@ RiseVision.BehaviourDirectory = (function() {
         behaviourCard.setAttribute("data-phone", behaviourNames[i].phone);
         behaviourCard.setAttribute("data-room", behaviourNames[i].room);
 
+        var behaviourImage = behaviourNames[i].image;
+        behaviourCard.setAttribute("data-image", behaviourImage);
 
-
-
-
-        behaviourCard.innerHTML = "<h2>"+behaviourEntry.textContent+"</h2>";
+        behaviourCard.innerHTML = "<img src='"+ behaviourImage +"'><h2>"+behaviourEntry.textContent+"</h2>";
 
         $behaviourCards.append(behaviourCard);
       }

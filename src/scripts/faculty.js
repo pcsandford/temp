@@ -109,9 +109,11 @@ RiseVision.FacultyDirectory = (function() {
         facultyCard.setAttribute("data-position", faculty[i].position);
         facultyCard.setAttribute("data-phone", faculty[i].phone);
         facultyCard.setAttribute("data-room", faculty[i].room);
-        facultyCard.setAttribute("data-image", faculty[i].image);
 
-        facultyCard.innerHTML = "<h2>"+facultyEntry.textContent+"</h2>";
+        var facultyImage = faculty[i].image
+        facultyCard.setAttribute("data-image", facultyImage);
+
+        facultyCard.innerHTML = "<img src='"+ facultyImage +"'><h2>"+facultyEntry.textContent+"</h2>";
 
         $facultyCards.append(facultyCard);
       }

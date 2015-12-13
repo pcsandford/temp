@@ -51,6 +51,7 @@ RiseVision.ConferenceRoomsDirectory = (function() {
 
     individualConferenceRoom.name = getCell(index, cells);
     individualConferenceRoom.room = getCell(++index, cells);
+    individualConferenceRoom.image = getCell(++index, cells);
 
 
     return individualConferenceRoom;
@@ -99,8 +100,10 @@ RiseVision.ConferenceRoomsDirectory = (function() {
         conferenceRoomCard.className = "card department-only";
         conferenceRoomCard.setAttribute("data-name", conferenceRoomEntry.textContent);
         conferenceRoomCard.setAttribute("data-room", conferenceRooms[i].room);
+        var conferenceRoomImage = conferenceRooms[i].image;
+        conferenceRoomCard.setAttribute("data-image", conferenceRoomImage);
 
-        conferenceRoomCard.innerHTML = "<h2>"+conferenceRoomEntry.textContent+"</h2>";
+        conferenceRoomCard.innerHTML = "<img src='"+ conferenceRoomImage +"'><h2>"+conferenceRoomEntry.textContent+"</h2>";
 
         $conferenceCards.append(conferenceRoomCard);
 

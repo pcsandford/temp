@@ -10,7 +10,6 @@ RiseVision.ClassroomsDirectory = (function() {
   var $mainContainer = $("#main-container");
   var $mainList = $(".classroom-directory");
   var $cardsClassroom = $(".cards-classrooms");
-  // var $departmentCards = $(".cards-departments");
 
   /*
    *  Private Methods
@@ -52,6 +51,7 @@ RiseVision.ClassroomsDirectory = (function() {
 
     individualClassroom.name = getCell(index, cells);
     individualClassroom.room = getCell(++index, cells);
+    individualClassroom.image = getCell(++index, cells);
 
 
     return individualClassroom;
@@ -100,8 +100,10 @@ RiseVision.ClassroomsDirectory = (function() {
         classroomCard.className = "card department-only";
         classroomCard.setAttribute("data-name", classroomEntry.textContent);
         classroomCard.setAttribute("data-room", classrooms[i].room);
+        var classroomImage = classrooms[i].image;
+        classroomCard.setAttribute("data-image", classroomImage);
 
-        classroomCard.innerHTML = "<h2>"+classroomEntry.textContent+"</h2>";
+        classroomCard.innerHTML = "<img src='"+ classroomImage +"'><h2>"+classroomEntry.textContent+"</h2>";
 
         $cardsClassroom.append(classroomCard);
 

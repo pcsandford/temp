@@ -55,6 +55,7 @@ RiseVision.CommunicationDirectory = (function() {
     communication.room = getCell(++index, cells);
     communication.dept = getCell(++index, cells);
     communication.position = getCell(++index, cells);
+    communication.image = getCell(++index, cells);
 
 
     return communication;
@@ -94,19 +95,8 @@ RiseVision.CommunicationDirectory = (function() {
 
         communicationEntry = document.createElement("li");
         communicationEntry.className = "communication-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
+
         communicationEntry.textContent = communicationNames[i].firstName + " " +communicationNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $communicationList.append(communicationEntry);
 
@@ -118,11 +108,10 @@ RiseVision.CommunicationDirectory = (function() {
         communicationCard.setAttribute("data-phone", communicationNames[i].phone);
         communicationCard.setAttribute("data-room", communicationNames[i].room);
 
+        var communicationImage = communicationNames[i].image;
+        communicationCard.setAttribute("data-image", communicationImage);
 
-
-
-
-        communicationCard.innerHTML = "<h2>"+communicationEntry.textContent+"</h2>";
+        communicationCard.innerHTML = "<img src='"+ communicationImage +"'><h2>"+communicationEntry.textContent+"</h2>";
 
         $communicationCards.append(communicationCard);
       }

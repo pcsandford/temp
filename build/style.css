@@ -173,157 +173,164 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
             transform: rotate(-45deg); } }
 
 body {
-  color: #EFEFEF; }
+  color: #EFEFEF;
+  font-family: "Roboto Condensed", sans-serif; }
 
 .wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; }
+  width: 1765px;
+  height: 626px; }
 
 .list-area {
-  width: 25vw;
-  height: 100vh;
-  background-color: #333333;
+  width: 25%;
+  height: 626px;
+  background-color: #96281B;
   float: left;
   position: relative;
-  z-index: 0; }
+  z-index: 100;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5); }
   .list-area .breadcrumb-area {
     width: 100%;
-    padding: 2vh 1vw;
+    padding: 20px 10px;
     position: absolute;
+    background-color: #96281B;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: 1000; }
     .list-area .breadcrumb-area .breadcrumbs {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw; }
+      padding: 20px 15px; }
       .list-area .breadcrumb-area .breadcrumbs li {
         display: inline-block;
-        padding-left: 1.5vw;
+        padding-left: 20px;
         position: relative; }
       .list-area .breadcrumb-area .breadcrumbs li:first-of-type {
-        padding-left: 0; }
+        padding-left: 0;
+        font-weight: 700; }
       .list-area .breadcrumb-area .breadcrumbs li:nth-of-type(n+2):before {
         content: "";
         position: absolute;
-        left: 8px;
-        top: 7px;
+        left: 6px;
+        top: 8px;
         width: 10px;
         height: 5px;
         background-color: #620004; }
+  .list-area #scroll-container {
+    height: 100%;
+    overflow: hidden; }
+  .list-area #scroll-container::-webkit-scrollbar {
+    width: 0 !important; }
   .list-area .list {
-    margin-top: 5vh;
+    margin-top: 40px;
     width: 100%;
-    height: 80vh;
+    height: 540px;
     position: relative;
-    top: 10vh;
-    left: 0;
-    overflow-x: hidden;
-    overflow-y: scroll; }
+    top: 64px;
+    left: 0; }
     .list-area .list .main-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 1; }
       .list-area .list .main-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh; }
+        font-size: 30px;
+        margin-bottom: 20px; }
     .list-area .list .departments-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 2;
       display: none; }
       .list-area .list .departments-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .faculty-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 3;
       display: none; }
       .list-area .list .faculty-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .staff-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 4;
       display: none; }
       .list-area .list .staff-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .classroom-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 5;
       display: none; }
       .list-area .list .classroom-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .conferenceRoom-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 6;
       display: none; }
       .list-area .list .conferenceRoom-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .undergraduateAdvisement-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 7;
       display: none; }
       .list-area .list .undergraduateAdvisement-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
         position: relative;
@@ -334,126 +341,143 @@ body {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 8;
       display: none; }
       .list-area .list .graduatePrograms-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .deansOffice-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 9;
       display: none; }
       .list-area .list .deansOffice-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .management-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 9;
       display: none; }
       .list-area .list .management-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .finance-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 9;
       display: none; }
       .list-area .list .finance-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .marketing-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 9;
       display: none; }
       .list-area .list .marketing-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .accounting-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 9;
       display: none; }
       .list-area .list .accounting-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
     .list-area .list .tech-directory, .list-area .list .minority-directory, .list-area .list .rehabInstitute-directory, .list-area .list .behaviour-directory, .list-area .list .communication-directory, .list-area .list .rehabCounselling-directory {
       list-style: none;
       padding: 0;
       margin: 0;
-      padding: 2vh 1vw;
+      padding: 20px 15px;
       position: absolute;
       top: 0;
       left: 0;
-      background-color: #333333;
+      background-color: #96281B;
       z-index: 9;
       display: none; }
       .list-area .list .tech-directory li, .list-area .list .minority-directory li, .list-area .list .rehabInstitute-directory li, .list-area .list .behaviour-directory li, .list-area .list .communication-directory li, .list-area .list .rehabCounselling-directory li {
-        font-size: 2vw;
-        margin-bottom: 2vh;
+        font-size: 30px;
+        margin-bottom: 20px;
         position: relative;
         right: -500px; }
 
+.list::-webkit-scrollbar {
+  width: 0 !important; }
+
+.list-area::-webkit-scrollbar {
+  width: 0 !important; }
+
 .card-area {
-  width: 75vw;
-  height: 100vh;
-  background-color: #666666;
+  width: 75%;
+  height: 626px;
+  background-image: url("../siuBackground.jpg");
+  background-size: cover;
   float: left;
-  position: relative;
-  z-index: 100;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5); }
-  .card-area .card-display {
+  position: relative; }
+  .card-area .text-instruction {
+    text-align: center;
+    font-size: 50px;
+    display: none; }
+  .card-area #card-display {
     width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .card-area #card-display::-webkit-scrollbar {
+    width: 0 !important; }
+  .card-area .card-display {
+    height: 100%;
     position: relative; }
+  .card-area .card-display::-webkit-scrollbar {
+    width: 0 !important; }
   .card-area .cards-mainList, .card-area .cards-departments, .card-area .cards-faculty, .card-area .cards-staff, .card-area .cards-classrooms, .card-area .cards-conferenceRooms, .card-area .cards-undergraduateAdvisement, .card-area .cards-graduatePrograms, .card-area .cards-deansOffice, .card-area .cards-management, .card-area .cards-finance, .card-area .cards-marketing, .card-area .cards-accounting, .card-area .cards-technology, .card-area .cards-minority, .card-area .cards-rehabInstitute, .card-area .cards-behaviour, .card-area .cards-communication, .card-area .cards-rehabCounselling {
     width: 100%;
     display: -webkit-box;
@@ -463,7 +487,6 @@ body {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    position: absolute;
     top: 0;
     left: 0;
     display: none; }
@@ -473,26 +496,34 @@ body {
     display: -ms-flexbox;
     display: flex; }
   .card-area .card {
-    width: 20vw;
-    height: 20vw;
-    margin: 2vw;
-    border-radius: 10px;
+    width: 350px;
+    height: auto;
+    margin: 30px;
+    border-radius: 5px;
     background-color: #EFEFEF;
     color: #333;
-    padding-top: 2vh;
+    padding: 20px 0 20px 0;
     text-align: center;
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); }
+    .card-area .card img {
+      width: 60%;
+      display: block;
+      margin: 0 auto 20px auto; }
+    .card-area .card h2 {
+      clear: both;
+      font-size: 24px;
+      font-weight: 700; }
   .card-area .back-button {
-    width: 120px;
-    height: 120px;
-    background-color: #620004;
-    position: absolute;
-    top: 2vw;
-    right: 2vw;
+    width: 70px;
+    height: 70px;
+    background-color: #96281B;
+    position: fixed;
+    top: 30px;
+    right: 30px;
     border-radius: 50%;
     z-index: 1000;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
@@ -500,91 +531,102 @@ body {
     .card-area .back-button img {
       width: 70%;
       position: absolute;
-      top: 35px;
-      right: 20px; }
+      top: 20px;
+      right: 12px; }
+
+.card-area::-webkit-scrollbar {
+  width: 0 !important; }
 
 .card-modal {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 1759px;
+  height: 626px;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 2000;
   display: none; }
   .card-modal .card-detail-area {
-    width: 1200px;
-    min-height: 900px;
-    border-radius: 20px;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: #DEDEDE;
+    background-color: white;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: 2000;
     color: #333; }
     .card-modal .card-detail-area .detail-image {
-      width: 400px;
-      height: 400px;
+      width: 200px;
+      height: 200px;
       border: 2px solid rebeccaPurple;
       float: left;
-      margin: 40px 80px 40px 40px; }
+      margin: 40px 20px 40px 40px; }
     .card-modal .card-detail-area .detail-name {
-      font-size: 4vw;
-      margin-top: 200px; }
+      width: 50%;
+      font-size: 50px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      float: left;
+      border-bottom: 1px solid #96281B; }
+    .card-modal .card-detail-area .detail-phone {
+      font-size: 30px;
+      display: block;
+      float: left;
+      width: 50%;
+      margin: 0 !important; }
+    .card-modal .card-detail-area .detail-room {
+      font-size: 30px;
+      display: block;
+      float: left;
+      width: 50%; }
     .card-modal .card-detail-area .detail-position {
       clear: both;
-      margin-left: 40px;
+      margin-left: 45px;
       margin-bottom: 0;
-      font-size: 3vw; }
+      font-size: 35px;
+      font-weight: 700; }
     .card-modal .card-detail-area .detail-department {
-      font-size: 3vw;
-      margin-left: 40px;
-      margin-top: 20px; }
-    .card-modal .card-detail-area .detail-phone {
-      font-size: 2vw;
-      display: inline-block;
-      margin-left: 40px;
-      margin-right: 40px; }
-    .card-modal .card-detail-area .detail-room {
-      font-size: 2vw;
-      display: inline-block; }
-    .card-modal .card-detail-area span {
-      font-weight: bold; }
+      font-size: 40px;
+      margin-left: 45px;
+      margin-top: 5px; }
+    .card-modal .card-detail-area .prefix {
+      font-weight: 700; }
     .card-modal .card-detail-area .card-close-button {
-      width: 100px;
-      height: 100px;
+      width: 60px;
+      height: 60px;
       position: absolute;
-      top: 30px;
-      right: 30px;
+      top: 15px;
+      right: 15px;
       border-radius: 50%;
-      background-color: cadetBlue;
+      background-color: #666666;
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); }
       .card-modal .card-detail-area .card-close-button:before {
         content: "";
         position: absolute;
-        left: 45px;
-        top: 20px;
+        left: 28px;
+        top: 10px;
         -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);
                 transform: rotate(0deg);
-        width: 10px;
-        height: 60px;
+        width: 8px;
+        height: 40px;
         border-radius: 5px;
         background-color: #EFEFEF;
         z-index: 9000; }
       .card-modal .card-detail-area .card-close-button:after {
         content: "";
         position: absolute;
-        left: 45px;
-        top: 20px;
+        left: 28px;
+        top: 10px;
         -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);
                 transform: rotate(0deg);
-        width: 10px;
-        height: 60px;
+        width: 8px;
+        height: 40px;
         border-radius: 5px;
         background-color: #EFEFEF;
         z-index: 9000; }
@@ -596,3 +638,6 @@ body {
 .card-close-button.xRotation2::after {
   -webkit-animation: rotation2 0.3s ease-in-out forwards;
           animation: rotation2 0.3s ease-in-out forwards; }
+
+::-webkit-scrollbar {
+  display: none; }

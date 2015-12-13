@@ -55,6 +55,7 @@ RiseVision.ManagementDirectory = (function() {
     management.room = getCell(++index, cells);
     management.dept = getCell(++index, cells);
     management.position = getCell(++index, cells);
+    management.image = getCell(++index, cells);
 
 
     return management;
@@ -94,19 +95,7 @@ RiseVision.ManagementDirectory = (function() {
 
         managementEntry = document.createElement("li");
         managementEntry.className = "management-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         managementEntry.textContent = managementNames[i].firstName + " " +managementNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $managementList.append(managementEntry);
 
@@ -118,11 +107,10 @@ RiseVision.ManagementDirectory = (function() {
         managementCard.setAttribute("data-phone", managementNames[i].phone);
         managementCard.setAttribute("data-room", managementNames[i].room);
 
+        var managementImage = managementNames[i].image;
+        managementCard.setAttribute("data-image", managementImage);
 
-
-
-
-        managementCard.innerHTML = "<h2>"+managementEntry.textContent+"</h2>";
+        managementCard.innerHTML = "<img src='"+ managementImage +"'><h2>"+managementEntry.textContent+"</h2>";
 
         $managementCards.append(managementCard);
 

@@ -13,6 +13,7 @@ $(document).ready(function(){
   $('.main-directory').on('click','li',function() {
     slideLevel = 1;
 
+
    var className = $(this).attr('data-test');
 
    $(".back-button").css("display","block");
@@ -392,7 +393,7 @@ $('.departments-directory').on('click','li',function() {
     var profilePhone = "Phone: " + $(this).data('phone');
     var profileRoom = "Room: " + $(this).data('room');
     } else {
-    var profileRoom = "Room" + $(this).data('room');
+    var profileRoom = "Room: " + $(this).data('room');
     }
     $('.card-detail-area img').attr('src',profileImage);
     $('.detail-name').text(profileName);
@@ -402,6 +403,18 @@ $('.departments-directory').on('click','li',function() {
     $('.detail-room').text(profileRoom);
     $( "p:contains('---')" ).css( "visibility", "hidden" );
   });
+
+  $('.card-display').on('click', '.card', function() {
+    if ($(this).hasClass('department-only')) {
+     $('.detail-room').css({display: 'block','text-align': 'center','font-size': '50px',visibility:'visible','margin-top':'60px',width:'100%'});
+     $( "p:contains('---')" ).css( "visibility", "hidden" );
+    } else {
+      $('.detail-room').css({display: 'block','text-align':'left',width:'50%','font-size': '30px', visibility:'visible','float':'left',margin:'0 0 40px 0'});
+      $('.detail-phone').css({margin:0});
+      $( "p:contains('---')" ).css( "visibility", "hidden" );
+    }
+  });
+
 
   $('.card-close-button').on('click', function() {
 
@@ -430,6 +443,7 @@ function resetActive(){
 
 // No activity do something.
 function inActive(){
+   $(".text-instruction").css("display","none");
     $(".list ul:visible").css("display","none");
     $(".main-directory").css("display","block");
     $(".card-display > div:visible").css("display","none");
@@ -447,7 +461,55 @@ function inActive(){
     console.log('inactive');
 }
 
+//return to home screen when home link in breadcrumbs is clicked
+
+$(".breadcrumbs li").on('click', function(){
+  console.log('go home');
+  $(".text-instruction").css("display","none");
+    $(".list ul:visible").css("display","none");
+    $(".main-directory").css("display","block");
+    $(".card-display > div:visible").css("display","none");
+    $(".cards-mainList").css("display","flex");
+    $('.card-modal').css('display', 'none');
+    $('.detail-name').text("");
+    $('.detail-position').text("");
+    $('.detail-department').text("");
+    $('.detail-phone').text("");
+    $('.detail-room').text("");
+    if($(".breadcrumbs > li").length > 1){
+      $(".breadcrumbs li:gt(0)").css('display','none');
+    }
+    $('.back-button').css('display','none');
+});
+
 // Check for mousemove, could add other events here such as checking for key presses ect.
 $(document).bind('click', function(){resetActive()});
+
+
+//autoscroll for list area
+
+var $scrollContainerList = $("#scroll-area");
+
+    $scrollContainerList.autoScroll({
+          "by": "none",
+          "pause": 5,
+          "click": true,
+          "minimumMovement": 5
+        });
+
+
+//autoscroll for card area
+
+var $scrollContainerCards = $("#card-display");
+
+
+    $scrollContainerCards.autoScroll({
+          "by": "none",
+          "pause": 5,
+          "click": true,
+          "minimumMovement": 5
+        });
+
+
 
 });

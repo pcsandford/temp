@@ -55,6 +55,7 @@ RiseVision.MarketingDirectory = (function() {
     marketing.room = getCell(++index, cells);
     marketing.dept = getCell(++index, cells);
     marketing.position = getCell(++index, cells);
+    marketing.image = getCell(++index, cells);
 
 
     return marketing;
@@ -94,19 +95,7 @@ RiseVision.MarketingDirectory = (function() {
 
         marketingEntry = document.createElement("li");
         marketingEntry.className = "marketing-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         marketingEntry.textContent = marketingNames[i].firstName + " " +marketingNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $marketingList.append(marketingEntry);
 
@@ -118,11 +107,10 @@ RiseVision.MarketingDirectory = (function() {
         marketingCard.setAttribute("data-phone", marketingNames[i].phone);
         marketingCard.setAttribute("data-room", marketingNames[i].room);
 
+        var marketingImage = marketingNames[i].image;
+        marketingCard.setAttribute('data-image', marketingImage);
 
-
-
-
-        marketingCard.innerHTML = "<h2>"+marketingEntry.textContent+"</h2>";
+        marketingCard.innerHTML = "<img src='"+ marketingImage +"'><h2>"+marketingEntry.textContent+"</h2>";
 
         $marketingCards.append(marketingCard);
 

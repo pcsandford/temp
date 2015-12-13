@@ -55,6 +55,7 @@ RiseVision.TechDirectory = (function() {
     tech.room = getCell(++index, cells);
     tech.dept = getCell(++index, cells);
     tech.position = getCell(++index, cells);
+    tech.image = getCell(++index, cells);
 
 
     return tech;
@@ -94,19 +95,7 @@ RiseVision.TechDirectory = (function() {
 
         techEntry = document.createElement("li");
         techEntry.className = "tech-name";
-        // departmentName = document.getElementsByClassName("department-name");
-        // departmentLink = $("#department-name-id").attr("data-link");
-        // suiteName = document.getElementsByClassName("suite-name");
-        // doctorName = document.getElementsByClassName("doctor-name");
         techEntry.textContent = techNames[i].firstName + " " +techNames[i].lastName ;
-        // departmentLink = advisementNames[i].link;
-
-
-        // advisementEntry.InnerHTML = departmentEntry.textContent;
-        // advisementEntry.className = departmentLink + "-directoryName";
-        // advisementEntry.setAttribute("data-link",departmentLink+"-link");
-        // advisementEntry.setAttribute("data-breadcrumbs",departmentEntry.textContent);
-        // advisementEntry.setAttribute("data-test",departmentLink);
 
         $techList.append(techEntry);
 
@@ -118,11 +107,10 @@ RiseVision.TechDirectory = (function() {
         techCard.setAttribute("data-phone", techNames[i].phone);
         techCard.setAttribute("data-room", techNames[i].room);
 
+        var techImage = techNames[i].image;
+        techCard.setAttribute("data-image", techImage);
 
-
-
-
-        techCard.innerHTML = "<h2>"+techEntry.textContent+"</h2>";
+        techCard.innerHTML = "<img src='"+ techImage +"'><h2>"+techEntry.textContent+"</h2>";
 
         $techCards.append(techCard);
       }
