@@ -555,7 +555,6 @@ body {
     top: 50%;
     background-color: white;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: 2000;
     color: #333; }
@@ -610,7 +609,6 @@ body {
         left: 28px;
         top: 10px;
         -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
                 transform: rotate(0deg);
         width: 8px;
         height: 40px;
@@ -623,7 +621,6 @@ body {
         left: 28px;
         top: 10px;
         -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
                 transform: rotate(0deg);
         width: 8px;
         height: 40px;

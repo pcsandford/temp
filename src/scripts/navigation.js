@@ -13,6 +13,9 @@ $(document).ready(function(){
   $('.main-directory').on('click','li',function() {
     slideLevel = 1;
 
+    //scroll the div to the top
+    $('#scroll-area').scrollTop(-100);
+
 
    var className = $(this).attr('data-test');
 
@@ -103,6 +106,9 @@ $(document).ready(function(){
 // selecting the department from the departments directory
 
 $('.departments-directory').on('click','li',function() {
+  //scroll the div to the top
+  $('#scroll-area').scrollTop(-100);
+
   slideLevel = 2;
    var className = $(this).attr('class');
    switch(className){
@@ -323,6 +329,9 @@ $('.departments-directory').on('click','li',function() {
     var slideStatus = $(".list ul:visible").attr('data-status');
     console.log(slideStatus);
 
+    //scroll the div to the top
+    $('#scroll-area').scrollTop(-100);
+
     switch(slideStatus){
       case "levelTwo":
         $(".list ul:visible").css("display","none");
@@ -359,16 +368,6 @@ $('.departments-directory').on('click','li',function() {
         });
   };
 
-
-//   function cardCheck(){
-//   var cardLevel = $('.departments-directory').attr("data-status")
-//   console.log(cardLevel);
-//   if(cardLevel == "levelTwo"){
-//     for(var i = 0; i < departmentDirectoryCardDetails.length; i++){
-//       $(".card-display").append("<div class='card'><h2>"+departmentDirectoryCardDetails[i]+"</h2></div>");
-//     }
-//   }
-// }
 
   // check breadcrumbs list and remove the back button if the user is on 'screen 1'
 
@@ -465,6 +464,10 @@ function inActive(){
 
 $(".breadcrumbs li").on('click', function(){
   console.log('go home');
+
+  //scroll the div to the top
+  $('#scroll-area').scrollTop(-100);
+
   $(".text-instruction").css("display","none");
     $(".list ul:visible").css("display","none");
     $(".main-directory").css("display","block");
